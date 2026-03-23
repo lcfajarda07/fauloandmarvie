@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wedding Invitation</title>
+  <title>Faulo & Marvie | Wedding Invitation</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #fcf7ef;
-      --bg-soft: #fffaf4;
-      --ink: #111111;
-      --muted: #6f615a;
-      --accent: #9a6b72;
-      --accent-soft: #f1d6dc;
-      --butter: #f6e7a8;
-      --butter-soft: #fff5cf;
-      --line: rgba(17, 17, 17, 0.08);
-      --shadow: 0 12px 34px rgba(0, 0, 0, 0.06);
+      --bg: #fcf8f4;
+      --bg-soft: #fffdf9;
+      --ink: #2a241f;
+      --muted: #756861;
+      --accent: #9b5f74;
+      --accent-deep: #7f4860;
+      --accent-soft: #f3d8df;
+      --butter: #f5e6ab;
+      --butter-soft: #fff6d5;
+      --blush: #f8e4e8;
+      --taupe: #d8c8bf;
+      --line: rgba(42, 36, 31, 0.10);
+      --shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
       --radius: 26px;
     }
 
@@ -29,7 +33,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, var(--bg-soft) 0%, #fffdf9 35%, var(--bg) 100%);
+      background: linear-gradient(180deg, #fffdf9 0%, #fcf8f4 45%, #faf4ee 100%);
       color: var(--ink);
       line-height: 1.7;
       overflow-x: hidden;
@@ -42,36 +46,90 @@
       line-height: 1.1;
     }
 
+   .save-intro {
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.save-intro-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.save-intro-names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.save-label {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-bottom: 0.18rem;
+}
+
+.save-date-line {
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-weight: 500;
+  margin-bottom: 0.18rem;
+  line-height: 1.1;
+}
+
+.save-location {
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  color: var(--accent);
+  margin-bottom: 1.8rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
     .floral-corner::before,
     .floral-corner::after {
       content: '✿';
       position: absolute;
-      font-size: 1.1rem;
-      color: rgba(154, 107, 114, 0.28);
+      font-size: 1rem;
+      color: rgba(155, 95, 116, 0.18);
       pointer-events: none;
     }
 
     .floral-corner::before {
-      top: 16px;
-      left: 18px;
+      top: 14px;
+      left: 16px;
     }
 
     .floral-corner::after {
-      bottom: 16px;
-      right: 18px;
+      bottom: 14px;
+      right: 16px;
     }
 
     .navbar {
-      background: rgba(255, 250, 244, 0.94);
+      background: rgba(255, 252, 248, 0.95);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(154, 107, 114, 0.12);
+      border-bottom: 1px solid rgba(155, 95, 116, 0.10);
     }
 
-    .navbar-brand,
+    .navbar-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--ink) !important;
+      letter-spacing: 0.01em;
+    }
+
     .navbar-nav .nav-link {
       color: var(--ink) !important;
+      font-size: 0.92rem;
       font-weight: 400;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.03em;
     }
 
     .navbar-nav .nav-link:hover {
@@ -84,11 +142,7 @@
       align-items: center;
       position: relative;
       padding-top: 88px;
-      background:
-        linear-gradient(rgba(252, 247, 239, 0.55), rgba(252, 247, 239, 0.72)),
-        radial-gradient(circle at top left, rgba(246, 231, 168, 0.35), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(241, 214, 220, 0.35), transparent 28%),
-        url('1.jpg') center/cover no-repeat;
+      background: url('1.jpg') center center / cover no-repeat;
     }
 
     .hero .container {
@@ -96,65 +150,131 @@
       z-index: 1;
     }
 
-    .top-heart {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      color: var(--ink);
-      font-weight: 300;
+    .hero-left-layout {
+      min-height: calc(100vh - 88px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 0 2.3rem;
+      position: relative;
+      z-index: 2;
     }
 
-    .hero-title {
-      font-size: clamp(3.2rem, 8vw, 6.7rem);
-      font-weight: 400;
-      margin-bottom: 0.4rem;
+    .hero-top-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 0.5rem;
     }
 
-    .hero-subtitle {
+    .hero-bottom-wrap {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.55rem;
+      padding-bottom: 0.3rem;
+    }
+
+    .hero-name-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: 38px;
+    }
+
+    .hero-name-box {
+    display: inline-block;
+    background: linear-gradient(
+      135deg,
+      rgba(243, 216, 223, 0.28),
+      rgba(245, 230, 171, 0.20)
+    );
+    padding: 0.18rem 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    font-weight: 600;
+    line-height: 1.02;
+    color: #1f1f1f;
+  }
+
+  .hero-name-box-top {
+    transform: translateX(-34px);
+    margin-bottom: 0.12rem;
+  }
+
+  .hero-name-box-bottom {
+    transform: translateX(26px);
+  }
+
+  .hero-rsvp-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  padding: 0.72rem 1.5rem;
+  background: rgba(255, 245, 240, 0.16);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.hero-rsvp-box:hover {
+  background: rgba(243, 216, 223, 0.24);
+  color: #1f1712;
+  border-color: rgba(255, 255, 255, 0.72);
+  transform: translateY(-1px);
+}
+
+    .hero-verse-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.18rem;
+    }
+
+    .hero-verse-box {
+      background: rgba(255, 255, 255, 0.93);
+      color: #2d2d2d;
+      padding: 0.18rem 0.85rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 1px solid rgba(0,0,0,0.04);
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.2rem, 3vw, 2rem);
-      font-weight: 300;
-      max-width: 760px;
-      margin: 0 auto 1rem;
+      font-size: 0.92rem;
+      line-height: 1.3;
     }
 
-    .hero-meta {
-      font-size: 1rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 2rem;
-    }
-
-    .btn-main {
-      background: transparent;
-      color: var(--ink);
-      border: 1px solid rgba(17,17,17,0.35);
-      border-radius: 0;
-      padding: 0.85rem 1.8rem;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      box-shadow: none;
-    }
-
-    .btn-main:hover {
-      background: var(--ink);
-      color: #fff;
-      border-color: var(--ink);
+    .hero-verse-ref {
+      font-size: 0.86rem;
     }
 
     .section-padding {
-      padding: 96px 0;
+      padding: 86px 0;
       position: relative;
     }
 
     .section-title {
-      font-size: clamp(2.7rem, 6vw, 5rem);
-      font-weight: 400;
+      font-size: clamp(2.1rem, 4vw, 3.35rem);
+      font-weight: 500;
       text-align: center;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.55rem;
       letter-spacing: 0.01em;
     }
 
@@ -162,22 +282,23 @@
       text-align: center;
       color: var(--accent);
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.15rem, 2.6vw, 1.9rem);
-      margin-bottom: 2rem;
-      font-weight: 300;
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      margin-bottom: 1.6rem;
+      font-weight: 400;
     }
 
     .section-subtitle {
       text-align: center;
       max-width: 820px;
-      margin: 0 auto 2.5rem;
+      margin: 0 auto 2rem;
       color: var(--muted);
       font-weight: 300;
+      font-size: 0.98rem;
     }
 
     .soft-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.65) 0%, rgba(255,248,240,0.72) 100%);
-      border: 1px solid rgba(154, 107, 114, 0.09);
+      background: linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,248,244,0.82) 100%);
+      border: 1px solid rgba(155, 95, 116, 0.09);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
@@ -185,11 +306,11 @@
     }
 
     .save-the-date {
-      background: linear-gradient(180deg, var(--bg-soft) 0%, #fff8ed 65%, var(--bg) 100%);
+      background: linear-gradient(180deg, #fffdf9 0%, #fff8f0 60%, #fcf8f4 100%);
     }
 
     .save-wrap {
-      max-width: 1000px;
+      max-width: 980px;
       margin: 0 auto;
       text-align: center;
     }
@@ -198,52 +319,51 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 2rem;
-      margin-bottom: 1rem;
+      gap: 1.3rem;
+      margin-bottom: 0.85rem;
       color: var(--ink);
     }
 
     .save-icon-side {
-      font-size: 2.2rem;
+      font-size: 1.6rem;
       line-height: 1;
-      opacity: 0.9;
       color: var(--accent);
     }
 
     .save-icon-center {
-      font-size: 4.5rem;
+      font-size: 3.2rem;
       line-height: 1;
       font-weight: 300;
       color: var(--ink);
     }
 
     .save-label {
-      letter-spacing: 0.14em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
-      font-size: 1rem;
+      font-size: 0.92rem;
       color: var(--muted);
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.2rem;
     }
 
     .save-date-line {
-      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
       font-weight: 400;
       margin-bottom: 0.25rem;
     }
 
     .save-location {
-      font-size: clamp(1.2rem, 3vw, 2rem);
+      font-size: clamp(1.05rem, 2vw, 1.55rem);
       color: var(--accent);
-      margin-bottom: 2rem;
+      margin-bottom: 1.8rem;
       font-family: 'Cormorant Garamond', serif;
     }
 
     .countdown-wrap {
-      padding: 1.6rem 1rem;
-      border-top: 1px solid rgba(154, 107, 114, 0.24);
-      border-bottom: 1px solid rgba(154, 107, 114, 0.24);
-      background: linear-gradient(90deg, rgba(246,231,168,0.18), rgba(241,214,220,0.16));
-      max-width: 860px;
+      padding: 1.35rem 1rem;
+      border-top: 1px solid rgba(155, 95, 116, 0.18);
+      border-bottom: 1px solid rgba(155, 95, 116, 0.18);
+      background: linear-gradient(90deg, rgba(245,230,171,0.20), rgba(243,216,223,0.18));
+      max-width: 820px;
       margin: 0 auto;
       border-radius: 18px;
     }
@@ -257,22 +377,22 @@
 
     .count-number {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.3rem, 8vw, 5.5rem);
+      font-size: clamp(2.1rem, 7vw, 4.6rem);
       font-weight: 500;
       line-height: 1;
     }
 
     .count-label {
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.11em;
       color: var(--muted);
-      font-size: 0.85rem;
-      margin-top: 0.35rem;
+      font-size: 0.8rem;
+      margin-top: 0.3rem;
     }
 
     .story-img-wrap,
     .detail-img-box,
-    .attire-img-wrap {
+    .attire-guide-photo {
       height: 100%;
       overflow: hidden;
       border-radius: var(--radius);
@@ -283,77 +403,433 @@
       min-height: 320px;
     }
 
-    .attire-img-wrap {
-      min-height: 240px;
-      max-height: 320px;
-    }
-
     .story-img,
     .detail-img,
     .gallery-img,
-    .attire-img {
+    .attire-guide-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    .story-step {
-      padding-left: 1rem;
-      border-left: 1px solid rgba(154, 107, 114, 0.28);
-      margin-bottom: 1rem;
-    }
+  .story-img-wrap {
+  height: 100%;
+  min-height: 520px;
+  overflow: hidden;
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
 
-    .story-step h5 {
-      font-size: 1.7rem;
-      font-weight: 400;
-      margin-bottom: 0.2rem;
-    }
+.story-img-wrap .carousel-inner,
+.story-img-wrap .carousel-item {
+  height: 100%;
+}
 
-    .story-step p,
-    .soft-card p,
-    .soft-card li {
-      font-weight: 300;
-    }
+.story-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-    .detail-img-box {
-      height: 240px;
-    }
+.story-card {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  border-radius: 32px;
+  border: 1.5px solid rgba(243, 216, 223, 0.55);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.06),
+    0 0 0 6px rgba(245, 230, 171, 0.10);
+}
+
+.story-card-inner {
+  padding: 3rem 2.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.story-step {
+  padding-left: 1.2rem;
+  border-left: 2px solid rgba(243, 216, 223, 0.45);
+  margin-bottom: 1.4rem;
+}
+
+.story-step p {
+  font-size: 1.18rem;
+  line-height: 1.85;
+  margin: 0;
+  color: var(--ink);
+}
+
+.story-carousel-btn {
+  width: 42px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.story-img-wrap:hover .story-carousel-btn {
+  opacity: 1;
+}
+
+.story-carousel-btn .carousel-control-prev-icon,
+.story-carousel-btn .carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  background-size: 55% 55%;
+  width: 2.3rem;
+  height: 2.3rem;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+@media (max-width: 991.98px) {
+  .story-img-wrap {
+    min-height: 380px;
+  }
+
+  .story-card-inner {
+    padding: 2rem 1.6rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .story-img-wrap {
+    min-height: 260px;
+    border-radius: 24px;
+  }
+
+  .story-card {
+    border-radius: 24px;
+  }
+
+  .story-card-inner {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .story-step p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .story-step {
+    padding-left: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+
+  .story-carousel-btn {
+    opacity: 1;
+    width: 36px;
+  }
+
+  .story-carousel-btn .carousel-control-prev-icon,
+  .story-carousel-btn .carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
+    background-size: 52% 52%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .story-img-wrap {
+    min-height: 220px;
+  }
+
+  .story-card-inner {
+    padding: 1.2rem 1rem;
+  }
+
+  .story-step p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+}
 
     .detail-card .card-body,
     .soft-card .card-body {
-      padding: 1.5rem;
+      padding: 1.4rem;
     }
 
     .eyebrow {
       display: inline-block;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--accent);
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.7rem;
     }
 
     .detail-title {
-      font-size: 2.1rem;
-      font-weight: 400;
+      font-size: 1.8rem;
+      font-weight: 500;
       margin-bottom: 0.35rem;
     }
 
     .detail-meta {
       color: var(--muted);
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-      margin-bottom: 0.9rem;
+      font-size: 0.94rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.85rem;
+    }
+
+    .celebration-card {
+      padding: 1.4rem;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.74), rgba(255,247,240,0.85));
+    }
+    .celebration-content {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    .celebration-visual {
+      border-radius: 20px;
+      overflow: hidden;
+      height: 100%;
+      min-height: 340px;
+      box-shadow: var(--shadow);
+    }
+
+    .celebration-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .mini-card {
+      border: 1px solid rgba(155, 95, 116, 0.14);
+      background: linear-gradient(180deg, rgba(255,247,236,0.82), rgba(255,255,255,0.72));
+      padding: 1rem 0.7rem;
+      text-align: center;
+      height: 100%;
+      border-radius: 18px;
+    }
+
+    .mini-card h4 {
+      font-size: 1.35rem;
+      color: var(--accent-deep);
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    .mini-card p {
+      margin-bottom: 0;
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
     }
 
     .map-frame {
       border: 0;
       width: 100%;
-      height: 280px;
+      height: 240px;
       border-radius: 18px;
-      margin-top: 1rem;
+      margin-top: 0.8rem;
     }
+
+
+
+    .guide-ok-row,
+    .guide-no-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+   .guide-card {
+  padding: 2.8rem 2.4rem;
+  background: linear-gradient(180deg, rgba(255,252,249,0.96), rgba(255,246,240,0.94));
+  border-radius: 30px;
+}
+
+.guide-copy-wrap {
+  padding: 0.4rem 0.3rem 0.4rem 0.2rem;
+}
+
+.guide-script {
+  font-family: 'Great Vibes', cursive;
+  color: #6a6764;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 0.9;
+  margin-bottom: 0.9rem;
+}
+
+.guide-heading {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: left;
+  margin-bottom: 1.4rem;
+  line-height: 1.05;
+}
+
+.guide-copy {
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin-bottom: 1.35rem;
+}
+
+.guide-copy-first {
+  margin-top: 0.2rem;
+}
+
+.guide-visual-wrap {
+  padding: 0.5rem 0.2rem;
+}
+
+.palette-strip {
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(42,36,31,0.10);
+  padding: 1rem 1rem 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+
+.swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(17,17,17,0.08);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.palette-caption {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+  text-align: center;
+  margin: 0;
+}
+
+.guide-no-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 0.2rem;
+  flex-wrap: wrap;
+}
+
+.guide-note-small {
+  font-size: 0.86rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 0.9rem;
+  line-height: 1.55;
+}
+
+.swatch.x-mark {
+  position: relative;
+}
+
+.swatch.x-mark::before,
+.swatch.x-mark::after {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 4px;
+  background: #000;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  border-radius: 999px;
+}
+
+.swatch.x-mark::before {
+  transform: translate(-50%, -50%) rotate(32deg);
+}
+
+.swatch.x-mark::after {
+  transform: translate(-50%, -50%) rotate(-32deg);
+}
+
+.section-divider-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  margin: 1.8rem auto;
+  width: 100%;
+  max-width: 420px;
+}
+
+.section-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(243, 216, 223, 0),
+    rgba(243, 216, 223, 0.95),
+    rgba(243, 216, 223, 0)
+  );
+}
+
+.section-divider-icon {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #d8a8b5;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 991.98px) {
+  .guide-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .guide-copy-wrap,
+  .guide-visual-wrap {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .guide-card {
+    padding: 1.6rem 1.1rem;
+  }
+
+  .guide-script {
+    text-align: center;
+    margin-bottom: 0.7rem;
+  }
+
+  .guide-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .guide-copy {
+    text-align: center;
+    font-size: 0.94rem;
+  }
+
+  .swatch {
+    width: 34px;
+    height: 34px;
+  }
+
+  .swatch.x-mark::before,
+  .swatch.x-mark::after {
+    width: 48px;
+  }
+}
 
     .gallery-item {
       position: relative;
@@ -361,7 +837,7 @@
       border-radius: 22px;
       cursor: pointer;
       box-shadow: var(--shadow);
-      height: 270px;
+      height: 250px;
       background: #efe8e3;
     }
 
@@ -384,32 +860,53 @@
       opacity: 0;
       transition: opacity 0.25s ease;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.25rem;
+      font-size: 1.05rem;
     }
 
     .gallery-item:hover .gallery-overlay {
       opacity: 1;
     }
 
-    .entourage-block {
-      padding: 2rem 1.2rem;
+    .entourage-section {
+      background:
+        linear-gradient(180deg, rgba(255,249,245,0.96), rgba(255,243,238,0.95));
     }
 
-    .entourage-main-title {
-      font-size: clamp(2.3rem, 5vw, 3.8rem);
-      font-weight: 400;
+    .entourage-palette-note {
+      display: inline-block;
+      margin: 0 auto 1.4rem;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(155,95,116,0.12);
+      background: linear-gradient(90deg, rgba(243,216,223,0.55), rgba(245,230,171,0.42));
+      font-size: 0.84rem;
+      color: var(--accent-deep);
+    }
+
+    .entourage-block {
+      padding: 1.7rem 1.1rem;
+      background:
+        linear-gradient(180deg, rgba(248,228,232,0.38), rgba(255,249,242,0.78));
+      border: 1px solid rgba(155,95,116,0.11);
+    }
+
+    .entourage-card-header {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.1rem, 4vw, 3.35rem);
+      font-weight: 500;
       text-align: center;
-      margin-bottom: 0.4rem;
-      letter-spacing: 0.04em;
+      margin-bottom: 0.55rem;
+      letter-spacing: 0.01em;
+      color: var(--ink);
     }
 
     .entourage-group-title {
-      font-size: clamp(1.7rem, 4vw, 2.45rem);
-      font-weight: 400;
-      color: var(--accent);
-      margin-bottom: 0.45rem;
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      font-weight: 600;
+      color: var(--accent-deep);
+      margin-bottom: 0.4rem;
       text-align: center;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
@@ -417,9 +914,9 @@
       text-align: center;
       color: var(--accent);
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.12rem;
-      margin-bottom: 1.5rem;
-      font-weight: 300;
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+      font-weight: 400;
       font-style: italic;
     }
 
@@ -432,83 +929,39 @@
 
     .name-list li {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1rem, 2vw, 1.45rem);
-      font-weight: 400;
-      margin-bottom: 0.18rem;
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      font-weight: 500;
+      margin-bottom: 0.08rem;
       color: var(--ink);
-    }
-
-    .mini-card {
-      border-top: 1px solid rgba(154, 107, 114, 0.22);
-      border-bottom: 1px solid rgba(154, 107, 114, 0.22);
-      background: linear-gradient(90deg, rgba(246,231,168,0.14), rgba(241,214,220,0.10));
-      padding: 1.35rem 0.6rem;
-      text-align: center;
-      height: 100%;
-      border-radius: 18px;
-    }
-
-    .mini-card h4 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: var(--accent);
-      font-weight: 400;
-      margin-bottom: 0.4rem;
-    }
-
-    .mini-card p {
-      margin-bottom: 0;
-      color: var(--ink);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.1rem, 2vw, 1.8rem);
-      font-weight: 400;
-    }
-
-    .attire-note {
-      font-size: 1rem;
-      color: var(--muted);
-      margin-top: 1rem;
-    }
-
-    .swatches {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1rem;
-      justify-content: center;
-    }
-
-    .swatch {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      border: 1px solid rgba(17,17,17,0.08);
-      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      line-height: 1.45;
     }
 
     .reminder-card {
       text-align: center;
-      padding: 1.5rem 1rem;
+      padding: 1.3rem 0.95rem;
       height: 100%;
+      background:
+        linear-gradient(180deg, rgba(255,251,246,0.92), rgba(255,245,238,0.95));
     }
 
     .reminder-card .icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 2.3rem;
+      margin-bottom: 0.7rem;
       color: var(--accent);
     }
 
     .reminder-card h4 {
-      font-size: clamp(1.6rem, 4vw, 2.3rem);
-      margin-bottom: 0.35rem;
-      font-weight: 400;
+      font-size: 1.32rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
     }
 
     .rsvp-panel {
       text-align: center;
-      padding: 2rem 1.2rem;
+      padding: 1.9rem 1.1rem;
       border-top: 2px solid var(--accent);
       position: relative;
-      background: linear-gradient(180deg, rgba(255,251,246,0.95), rgba(255,247,236,0.9));
+      background: linear-gradient(180deg, rgba(255,251,246,0.95), rgba(255,247,236,0.92));
     }
 
     .rsvp-panel::before,
@@ -517,7 +970,7 @@
       position: absolute;
       top: 16px;
       font-size: 0.95rem;
-      color: rgba(154, 107, 114, 0.55);
+      color: rgba(155, 95, 116, 0.45);
     }
 
     .rsvp-panel::before {
@@ -529,29 +982,29 @@
     }
 
     .rsvp-heading {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      font-weight: 300;
-      margin-bottom: 0.9rem;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 500;
+      margin-bottom: 0.8rem;
     }
 
     .rsvp-copy {
       max-width: 700px;
       margin: 0 auto 0.8rem;
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.1rem, 2.6vw, 1.7rem);
-      font-weight: 300;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 400;
     }
 
     .rsvp-cheers {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.2rem, 2.6vw, 1.8rem);
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
       margin-bottom: 1rem;
-      font-weight: 400;
+      font-weight: 500;
     }
 
     .rsvp-button-wrap {
       display: inline-block;
-      border: 1px solid rgba(17,17,17,0.45);
+      border: 1px solid rgba(17,17,17,0.35);
       padding: 0.28rem;
       background: transparent;
     }
@@ -562,7 +1015,7 @@
       padding: 0.58rem 1.2rem;
       color: var(--ink);
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.35rem, 3vw, 2rem);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
       font-weight: 600;
       text-decoration: underline;
       text-underline-offset: 4px;
@@ -596,22 +1049,44 @@
 
     @media (max-width: 991.98px) {
       .section-padding {
-        padding: 76px 0;
+        padding: 72px 0;
       }
 
       .story-img-wrap {
         min-height: 260px;
       }
 
-      .attire-img-wrap {
-        min-height: 220px;
-        max-height: 260px;
+      .celebration-visual {
+        min-height: 250px;
+        margin-bottom: 1rem;
       }
     }
 
     @media (max-width: 767.98px) {
       .hero {
-        min-height: 88vh;
+        min-height: 92vh;
+      }
+
+      .hero-left-layout {
+        min-height: calc(92vh - 88px);
+        padding: 1.5rem 0 1.8rem;
+      }
+
+      .hero-name-box {
+        font-size: 1.85rem;
+        padding: 0.18rem 0.75rem;
+      }
+
+      .hero-name-box-top {
+        transform: translateX(-18px) rotate(-2deg);
+      }
+
+      .hero-name-box-bottom {
+        transform: translateX(14px) rotate(-2deg);
+      }
+
+      .hero-verse-box {
+        font-size: 0.78rem;
       }
 
       .countdown {
@@ -619,37 +1094,37 @@
         row-gap: 1rem;
       }
 
-      .save-icon-row {
-        gap: 1rem;
-      }
-
-      .save-icon-center {
-        font-size: 3rem;
-      }
-
       .gallery-item {
-        height: 210px;
+        height: 200px;
       }
 
-      .detail-img-box,
       .map-frame {
         height: 220px;
-      }
-
-      .btn-main {
-        width: 100%;
       }
 
       .rsvp-button {
         min-width: 190px;
       }
+
+      .navbar-brand {
+        font-size: 1.65rem;
+      }
+
+      .guide-heading {
+        text-align: center;
+      }
+
+      .guide-script {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
+
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#home">Faulo & Marvie</a>
+      <a class="navbar-brand" href="#home">Faulo &amp; Marvie</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -658,7 +1133,10 @@
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#story">Story</a></li>
           <li class="nav-item"><a class="nav-link" href="#celebration">Celebration</a></li>
+          <li class="nav-item"><a class="nav-link" href="#attire">Wedding Attire</a></li>
+          <li class="nav-item"><a class="nav-link" href="#entourage">Entourage</a></li>
           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reminders">Reminders</a></li>
           <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
         </ul>
       </div>
@@ -666,149 +1144,247 @@
   </nav>
 
   <section id="home" class="hero floral-corner">
-    <div class="container text-center">
-      <div class="top-heart">♡</div>
-      <h1 class="hero-title">Faulo & Marvie</h1>
-      <p class="hero-subtitle">request the honor of your presence as they celebrate a day of love, promise, and beautiful beginnings.</p>
-        <div class="hero-meta">October 18, 2026 • Talisay City, Negros Occidental</div>
-      <a href="#rsvp" class="btn btn-main">RSVP now</a>
-    </div>
-  </section>
-
-  <section id="save-date" class="save-the-date section-padding floral-corner">
-    <div class="container">
-      <div class="save-wrap">
-        <div class="save-icon-row">
-          <div class="save-icon-side">~</div>
-          <div class="save-icon-center">♡</div>
-          <div class="save-icon-side">~</div>
+    <div class="container hero-left-layout">
+      <div class="hero-top-wrap">
+        <div class="hero-name-stack">
+          <div class="hero-name-box hero-name-box-top">Faulo &amp;</div>
+          <div class="hero-name-box hero-name-box-bottom">Marvie</div>
         </div>
-        <div class="save-label">Save the Date</div>
-        <div class="save-date-line display-font">October 18, 2026 | Sunday</div>
-        <div class="save-location">Nature’s Village Resort, Talisay Highway, Talisay City, Metro Bacolod, 6115 Negros Occidental</div>
-        <div class="countdown-wrap">
-          <div class="countdown">
-            <div>
-              <div class="count-number" id="days">00</div>
-              <div class="count-label">Days</div>
-            </div>
-            <div>
-              <div class="count-number" id="hours">00</div>
-              <div class="count-label">Hours</div>
-            </div>
-            <div>
-              <div class="count-number" id="minutes">00</div>
-              <div class="count-label">Mins</div>
-            </div>
-            <div>
-              <div class="count-number" id="seconds">00</div>
-              <div class="count-label">Secs</div>
-            </div>
-          </div>
+      </div>
+
+      <div class="hero-bottom-wrap">
+        <a href="#rsvp" class="btn hero-rsvp-box">RSVP now</a>
+        <div class="hero-verse-wrap">
+          <div class="hero-verse-box">He has made everything beautiful in its time.</div>
+          <div class="hero-verse-box hero-verse-ref">Ecclesiastes 3:11</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="story" class="section-padding floral-corner">
-    <div class="container">
-      <h2 class="section-title">Our Story</h2>
-      <p class="section-subtitle">A graceful beginning, a thousand little moments, and a promise to keep choosing each other every day.</p>
-      <div class="row g-4 align-items-center mb-5">
-        <div class="col-lg-6">
-          <div class="story-img-wrap">
-            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80" alt="Couple story photo" class="story-img">
+<section id="save-date" class="save-the-date section-padding floral-corner">
+  <div class="container">
+    <div class="save-wrap">
+       <div class="save-icon-row">
+        <div class="save-icon-side">~</div>
+        <div class="save-icon-center">♡</div>
+        <div class="save-icon-side">~</div>
+      </div>
+      <div class="save-intro">
+        <div class="save-intro-line">You are invited to the wedding of</div>
+        <div class="save-intro-names">Faulo &amp; Marvie</div>
+      </div>
+
+
+
+      <div class="save-label">Save the Date</div>
+      <div class="save-date-line display-font">October 18, 2026 | Sunday</div>
+      <div class="save-location">Nature’s Village Resort, Talisay Highway, Talisay City, Negros Occidental</div>
+
+      <div class="countdown-wrap">
+        <div class="countdown">
+          <div>
+            <div class="count-number" id="days">00</div>
+            <div class="count-label">Days</div>
+          </div>
+          <div>
+            <div class="count-number" id="hours">00</div>
+            <div class="count-label">Hours</div>
+          </div>
+          <div>
+            <div class="count-number" id="minutes">00</div>
+            <div class="count-label">Mins</div>
+          </div>
+          <div>
+            <div class="count-number" id="seconds">00</div>
+            <div class="count-label">Secs</div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="soft-card p-4 p-md-5 h-100 floral-corner">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider-heart">
+  <span class="section-divider-line"></span>
+  <span class="section-divider-icon">♡</span>
+  <span class="section-divider-line"></span>
+</div>
+
+<section id="story" class="section-padding floral-corner">
+  <div class="container">
+    <h2 class="section-title">Our Story</h2>
+    <p class="section-subtitle">It all started with chit chat- one ordinary day that turned extraordinary.</p>
+
+    <div class="row g-4 align-items-stretch mb-5">
+      <div class="col-lg-6">
+        <div id="storyCarousel" class="carousel slide carousel-fade story-img-wrap" data-bs-ride="carousel" data-bs-interval="3500">
+          <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+              <img src="2.jpg" alt="Our Story 1" class="story-img d-block w-100">
+            </div>
+            <div class="carousel-item h-100">
+              <img src="3.jpg" alt="Our Story 2" class="story-img d-block w-100">
+            </div>
+            <div class="carousel-item h-100">
+              <img src="4.jpg" alt="Our Story 3" class="story-img d-block w-100">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev story-carousel-btn" type="button" data-bs-target="#storyCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next story-carousel-btn" type="button" data-bs-target="#storyCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="soft-card story-card h-100 floral-corner">
+          <div class="story-card-inner">
             <div class="story-step">
-              <h5>Where It Began</h5>
-              <p class="mb-0">We met at just the right time, when laughter came easily and every conversation felt like home.</p>
+              <p class="mb-0">It all started with chit chat- one ordinary day that turned extraordinary.</p>
             </div>
             <div class="story-step">
-              <h5>How Love Grew</h5>
-              <p class="mb-0">Through simple dates, long talks, and shared dreams, we discovered a love that felt gentle and sure.</p>
+              <p class="mb-0">What began as casual conversations turned into deep midnight talks and shared dreams that made our hearts feel at home.</p>
+            </div>
+            <div class="story-step">
+              <p class="mb-0">This moment prove that distance means nothing when love is real.</p>
             </div>
             <div class="story-step mb-0">
-              <h5>Our Forever</h5>
-              <p class="mb-0">Now we look forward to our next chapter, grateful for every step that led us here.</p>
+              <p class="mb-0">Long distance is finally over.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="gallery-item" onclick="openImage(this)">
-            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt="Story gallery 1" class="gallery-img">
-            <div class="gallery-overlay">A quiet beginning</div>
+    </div>
+  </div>
+</section>  
+
+<div class="section-divider-heart">
+  <span class="section-divider-line"></span>
+  <span class="section-divider-icon">♡</span>
+  <span class="section-divider-line"></span>
+</div>
+
+  <section id="celebration" class="section-padding floral-corner">
+    <div class="container">
+      <h2 class="section-title">The Celebration</h2>
+      <p class="section-subtitle">One venue, one shared location, and a smooth transition from ceremony to reception.</p>
+
+      <div class="soft-card celebration-card">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5">
+            <div class="celebration-visual">
+              <img src="3.jpg" alt="Celebration venue">
+            </div>
           </div>
+
+  <div class="col-lg-7">
+  <div class="card-body p-80 h-100 celebration-content">
+    <div class="eyebrow">Wedding Day Details</div>
+    <h3 class="detail-title">Garden Ceremony • Indoor Reception</h3>
+    <div class="detail-meta">Nature’s Village Resort • Talisay City, Negros Occidental</div>
+    <p>The ceremony will be held in the garden, followed by an indoor reception in the same venue. Guests may stay in one location throughout the celebration.</p>
+
+    <div class="row g-3 mt-1 mb-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="mini-card">
+          <h4>Guest Arrival</h4>
+          <p>2:00 PM</p>
         </div>
-        <div class="col-md-4">
-          <div class="gallery-item" onclick="openImage(this)">
-            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=80" alt="Story gallery 2" class="gallery-img">
-            <div class="gallery-overlay">Shared days</div>
-          </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="mini-card">
+          <h4>Ceremony</h4>
+          <p>Garden · 3:00 PM</p>
         </div>
-        <div class="col-md-4">
-          <div class="gallery-item" onclick="openImage(this)">
-            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=80" alt="Story gallery 3" class="gallery-img">
-            <div class="gallery-overlay">The promise</div>
-          </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="mini-card">
+          <h4>Glazing Table</h4>
+          <p>5:00 PM</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="mini-card">
+          <h4>Reception</h4>
+          <p>Indoor · 6:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="eyebrow">Venue Map</div>
+    <h3 class="detail-title">Shared Venue Location</h3>
+    <p>Both parts of the event will happen in the same place, so only one location is needed for guests.</p>
+    <iframe
+      class="map-frame"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Nature%27s%20Village%20Resort%20Talisay%20Negros%20Occidental&output=embed"></iframe>
+  </div>
+</div>
         </div>
       </div>
     </div>
   </section>
 
-<section id="celebration" class="details-section section-padding floral-corner">
+  <div class="section-divider-heart">
+  <span class="section-divider-line"></span>
+  <span class="section-divider-icon">♡</span>
+  <span class="section-divider-line"></span>
+</div>
+
+<section id="attire" class="section-padding floral-corner">
   <div class="container">
-    <h2 class="section-title">The Celebration</h2>
-    <p class="section-subtitle">One garden venue, one shared location map, and a seamless transition from an outdoor wedding ceremony to an indoor reception.</p>
+    <h2 class="section-title">Wedding Attire</h2>
+    <p class="section-subtitle">A soft, polished palette of blush pink, butter yellow, and refined neutrals.</p>
 
-    <div class="row">
-      <div class="col-12">
-        <div class="soft-card h-100">
-          <div class="detail-img-box">
-            <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1200&q=80" alt="Wedding celebration" class="detail-img">
+    <div class="soft-card guide-card floral-corner">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5">
+          <div class="guide-copy-wrap">
+            <div class="guide-script">Your Guide</div>
+            <h3 class="guide-heading">On Attire</h3>
+
+            <p class="guide-copy guide-copy-first">
+              Formal or semi-formal attire is warmly requested. We would truly appreciate our guests wearing polished pieces in soft and muted tones for a graceful and cohesive look.
+            </p>
+
+            <p class="guide-copy mb-0">
+              Shades from blush, butter yellow, champagne, beige, taupe, and brown are welcome.
+            </p>
           </div>
+        </div>
 
-          <div class="card-body">
-            <div class="eyebrow">Wedding Day Details</div>
-            <h3 class="detail-title">Garden Ceremony • Indoor Reception</h3>
-            <div class="detail-meta">Tanauan City, Batangas</div>
-            <p>The wedding ceremony will take place in the garden, followed by an indoor reception in the same venue. Guests may stay in one location throughout the celebration.</p>
-
-            <div class="row g-3 mt-1 mb-4">
-              <div class="col-md-6 col-lg-3">
-                <div class="mini-card">
-                  <h4>Ceremony</h4>
-                  <p>Garden • 2:00 PM</p>
-                </div>
+        <div class="col-lg-7">
+          <div class="guide-visual-wrap">
+            <div class="palette-strip">
+              <div class="swatches">
+                <div class="swatch" style="background:#f5e6ab"></div>
+                <div class="swatch" style="background:#f3d8df"></div>
+                <div class="swatch" style="background:#eadfd6"></div>
+                <div class="swatch" style="background:#d7c4b6"></div>
+                <div class="swatch" style="background:#a37c57"></div>
               </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="mini-card">
-                  <h4>Reception</h4>
-                  <p>Indoor • 5:00 PM</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="mini-card">
-                  <h4>Guest Arrival</h4>
-                  <p>1:30 PM</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="mini-card">
-                  <h4>Cocktail Hour</h4>
-                  <p>4:00 PM</p>
-                </div>
-              </div>
+              <div class="palette-caption">A soft floral palette with blush, butter yellow, and refined neutrals.</div>
             </div>
 
-            <div class="eyebrow">Venue Map</div>
-            <h3 class="detail-title">Shared Venue Location</h3>
-            <p>Since both parts of the event are held in the same venue, only one location map is needed for guests.</p>
-            <iframe class="map-frame" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Tanauan%20City%20Batangas&output=embed"></iframe>
+            <div class="guide-no-row">
+              <div class="swatch x-mark" style="background:#7f145d"></div>
+              <div class="swatch x-mark" style="background:#6431a9"></div>
+              <div class="swatch x-mark" style="background:#93c400"></div>
+              <div class="swatch x-mark" style="background:#ffd800"></div>
+              <div class="swatch x-mark" style="background:#1fa4f2"></div>
+              <div class="swatch x-mark" style="background:#ff0000"></div>
+            </div>
+
+            <div class="guide-note-small">
+              Please avoid bright, neon, or highly saturated colors to keep the theme consistent.
+            </div>
           </div>
         </div>
       </div>
@@ -816,35 +1392,11 @@
   </div>
 </section>
 
-  <section id="attire" class="attire-section section-padding floral-corner">
-    <div class="container">
-      <h2 class="section-title">Wedding Attire</h2>
-      <p class="section-kicker">A soft floral palette with black, butter yellow, blush pink, and refined neutrals.</p>
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5">
-          <div class="attire-img-wrap">
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Wedding attire inspiration" class="attire-img">
-          </div>
-        </div>
-        <div class="col-lg-7">
-          <div class="soft-card p-4 p-md-5 floral-corner">
-            <div class="eyebrow">Dress Code</div>
-            <h3 class="detail-title">Formal / Semi-Formal</h3>
-            <p>We kindly invite our guests to wear elegant and polished attire appropriate for a garden ceremony and indoor reception.</p>
-            <p class="attire-note">Suggested colors include black, butter yellow, blush pink, champagne, beige, taupe, and other muted neutrals. Please avoid neon shades and overly loud prints.</p>
-            <div class="swatches">
-              <div class="swatch" style="background:#111111"></div>
-              <div class="swatch" style="background:#f6e7a8"></div>
-              <div class="swatch" style="background:#f1d6dc"></div>
-              <div class="swatch" style="background:#efe7df"></div>
-              <div class="swatch" style="background:#c4ab9c"></div>
-              <div class="swatch" style="background:#8f6548"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="section-divider-heart">
+  <span class="section-divider-line"></span>
+  <span class="section-divider-icon">♡</span>
+  <span class="section-divider-line"></span>
+</div>
 
  <section id="entourage" class="entourage-section section-padding floral-corner">
   <div class="container">
@@ -856,129 +1408,195 @@
         <div class="col-md-6">
           <h4 class="entourage-group-title">Groom’s Parents</h4>
           <ul class="name-list small">
-            <li>Mr. Emiliano Natanauan</li>
-            <li>Mrs. Marilou Natanauan</li>
+            <li>Mr. Fausto Ramos</li>
+            <li>Mrs. Lota Ramos</li>
           </ul>
         </div>
         <div class="col-md-6">
           <h4 class="entourage-group-title">Bride’s Parents</h4>
           <ul class="name-list small">
-            <li>Mr. Roberto Garcia</li>
-            <li>Mrs. Lorena Garcia</li>
+            <li>Mr. Roberto Jaravelo</li>
+            <li>Mrs. Marilyn Jaravelo</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="soft-card entourage-block mb-4 floral-corner">
-      <div class="entourage-card-header">Our Life Godparents</div>
-      <div class="entourage-subtext">To stand as principal witnesses in our exchange of vows...</div>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <ul class="name-list small">
-            <li>Mr. Enrico Landicho</li>
-            <li>Mr. Eduardo Garcia</li>
-            <li>Mr. Ferdinand Cruz</li>
-            <li>Mr. Ireneo Natanauan</li>
-            <li>Mr. Edmon Marquezo</li>
-            <li>Mr. Nicolas Laude</li>
-            <li>Mr. Leonel Dimapilis</li>
-            <li>Mr. David Terrenal</li>
-            <li>Mr. Ariston Ramos</li>
-            <li>Mr. Remigio Villamayor Jr.</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <ul class="name-list small">
-            <li>Mrs. Mary Jane Landicho</li>
-            <li>Mrs. Raquel Garcia</li>
-            <li>Mrs. Maria Eden Cruz</li>
-            <li>Mrs. Menchie Natanauan</li>
-            <li>Mrs. Aniely Marquezo</li>
-            <li>Mrs. Emma Laude</li>
-            <li>Mrs. Rashel Dimapilis</li>
-            <li>Mrs. Aurora Terrenal</li>
-            <li>Mrs. Vicenta Ramos</li>
-            <li>Mrs. Maine Villamayor</li>
-          </ul>
+      <div class="soft-card entourage-block mb-4 floral-corner">
+        <div class="entourage-card-header">Our Life Godparents</div>
+        <div class="entourage-subtext">To stand as principal witnesses in our exchange of vows...</div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <ul class="name-list small">
+              <li>Pastor Roberto Fajarda</li>
+              <li>Mr. Aguinaldo Cacatian</li>
+              <li>Mr. Joselito Espino</li>
+              <li>Mr. Zaldy Diaz</li>
+              <li>Mrs. Paula Magtibay</li>
+              <li>Mrs. Ma. Luz Maca</li>
+              <li>Mr. Richard Ruel</li>
+              <li>Mr. Rodolfo Ocampo</li>
+              <li>Mr. Marjevic Ciocon</li>
+              <li>Mr. Jose Ipo Jr.</li>
+              <li>Mr. Rolando Batusbatusan</li>
+              <li>Pastor George Cadelina</li>
+              <li>Mrs. Yvonne Talabucon</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="name-list small">
+              <li>Mrs. Marife Fajarda</li>
+              <li>Luzviminda Cacatain</li>
+              <li>Mrs. Loditha Espino</li>
+              <li>Mrs. Jennifer Diaz</li>
+              <li>Mrs. Maria Victoria Ola</li>
+              <li>Mrs. Myra Cacayan</li>
+              <li>Mrs. Miriam Ruel</li>
+              <li>Mrs. Grace Ocampo</li>
+              <li>Mrs. Evelyn Serisola</li>
+              <li>Ms. Carmen Ipo</li>
+              <li>Mrs. Monina Batusbatusan</li>
+              <li>Mrs. Loreto Cadelina</li>
+              <li>Mrs. Salvacion Santua</li>
+              <li>Florentina Chen</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="soft-card entourage-block mb-4 floral-corner">
-      <div class="entourage-card-header">Our Secondary Sponsors</div>
-      <div class="entourage-subtext">To assist us in our needs and to guide us on our way...</div>
-      <div class="row g-4 mb-4">
-        <div class="col-md-6">
-          <h4 class="entourage-group-title">Best Man</h4>
-          <ul class="name-list small">
-            <li>Mr. Ceejay Redondo</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <h4 class="entourage-group-title">Maid of Honor</h4>
-          <ul class="name-list small">
-            <li>Ms. Aileen Viernes</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <h4 class="entourage-group-title">Groomsmen</h4>
-          <ul class="name-list small">
-            <li>Mr. Lorenz Garcia</li>
-            <li>Mr. Mark Jansen Laurenaria</li>
-            <li>Mr. Zyrel Icabales</li>
-            <li>Mr. Nathaniel Barrion</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <h4 class="entourage-group-title">Bridesmaids</h4>
-          <ul class="name-list small">
-            <li>Ms. Jaemee Javier</li>
-            <li>Ms. Ella-Mae Natanauan</li>
-            <li>Mrs. Aiza Harder</li>
-            <li>Ms. Chydel Marie Barramo</li>
-          </ul>
+      <div class="soft-card entourage-block mb-4 floral-corner">
+        <div class="entourage-card-header">Our Secondary Sponsors</div>
+        <div class="entourage-subtext">To assist us in our needs...</div>
+        <div class="row g-4 mb-2">
+          <div class="col-md-6">
+            <h4 class="entourage-group-title">Best Man</h4>
+            <ul class="name-list small">
+              <li>Mr. Orlan Sison</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4 class="entourage-group-title">Maid of Honor</h4>
+            <ul class="name-list small">
+              <li>Ms. Christine Charito</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="soft-card entourage-block floral-corner">
-      <div class="entourage-card-header">Our Symbol Bearers</div>
-      <div class="entourage-subtext">To carry our symbol of love, treasure, and faith...</div>
-      <div class="row g-4 mb-4 justify-content-center">
-        <div class="col-md-4">
-          <h4 class="entourage-group-title">Ring Bearer</h4>
-          <ul class="name-list small">
-            <li>Paul Drix Natanauan</li>
-          </ul>
+      <div class="soft-card entourage-block mb-4 floral-corner">
+        <div class="entourage-card-header">Our Secondary Sponsors</div>
+        <div class="entourage-subtext">To guide us on our way...</div>
+
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <h4 class="entourage-group-title">Groomsmen</h4>
+            <ul class="name-list small">
+              <li>Mr. Dominic Dawat</li>
+              <li>Mr. Judyson M. Ramos</li>
+              <li>Mr. Lemuel Fajarda</li>
+              <li>Mr. Joemar M. Ramos</li>
+              <li>Mr. Edwin R. Vencilao Jr.</li>
+              <li>Mr. Levi Carlo Espino</li>
+              <li>Mr. Roberto Jaravelo</li>
+              <li>Mr. Miko Vladimir Ciocon</li>
+              <li>Mr. Archie Cacatian</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4 class="entourage-group-title">Bridesmaids</h4>
+            <ul class="name-list small">
+              <li>Ms. Ana Luna Cacatian</li>
+              <li>Ms. Rosemarie Jaravelo</li>
+              <li>Ms. Angela Cacatian</li>
+              <li>Ms. Lorraine Ramos</li>
+              <li>Ms. Christine Alojado</li>
+              <li>Ms. Sarah Guillan Serisola</li>
+              <li>Ms. Charlotte Ramos</li>
+              <li>Ms. Faula Jane M. Ramos</li>
+              <li>Ms. Leonila Dela Cruz</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4">
-          <h4 class="entourage-group-title">Bible Bearer</h4>
-          <ul class="name-list small">
-            <li>Xzian Icabales</li>
-          </ul>
+
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <h4 class="entourage-group-title">Candle</h4>
+            <ul class="name-list small">
+              <li>Mr. Mark Jaravelo</li>
+              <li>Mrs. Lorelie Jaravelo</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4 class="entourage-group-title">Veil</h4>
+            <ul class="name-list small">
+              <li>Mr. Nikki Mopada</li>
+              <li>Mrs. Roselyn Mopada</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4">
-          <h4 class="entourage-group-title">Coin Bearer</h4>
-          <ul class="name-list small">
-            <li>Nathaniel Lenon Barrion</li>
-          </ul>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4 class="entourage-group-title">Cord</h4>
+            <ul class="name-list small">
+              <li>Mr. Jerald Ramos</li>
+              <li>Mrs. Maricel Ramos</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h4 class="entourage-group-title">Banner Bearers</h4>
-          <ul class="name-list small">
-            <li>Jude Marius Laurenaria</li>
-            <li>Renz Carl Ghian Garcia</li>
-          </ul>
+
+      <div class="soft-card entourage-block mb-4 floral-corner">
+        <div class="entourage-card-header">Our Symbol Bearers</div>
+        <div class="entourage-subtext">To carry our symbol of Love, Treasure, and Faith</div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-6">
+            <h4 class="entourage-group-title">Bible Bearer</h4>
+            <ul class="name-list small">
+              <li>Feyne Sunday Jireh Ramos</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <h4 class="entourage-group-title">Ring Bearer</h4>
+            <ul class="name-list small">
+              <li>Marco Skyler Jaravelo</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="entourage-group-title">Coin Bearer</h4>
+            <ul class="name-list small">
+              <li>Louel Dela Cruz</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-card entourage-block floral-corner">
+        <div class="entourage-card-header">Our Flower Girls</div>
+        <div class="entourage-subtext">To shower us with love blooms</div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <ul class="name-list small">
+              <li>Rishna Alexandria Mopada</li>
+              <li>Francine Sophia Judah Ramos</li>
+              <li>Loreen Hope Fajarda</li>
+              <li>Jiana Jean Espada</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <div class="section-divider-heart">
+  <span class="section-divider-line"></span>
+  <span class="section-divider-icon">♡</span>
+  <span class="section-divider-line"></span>
+</div>
 
   <section id="gallery" class="section-padding floral-corner">
     <div class="container">
@@ -986,31 +1604,57 @@
       <p class="section-subtitle">Click any photo for a closer look.</p>
       <div class="row g-4">
         <div class="col-6 col-md-4">
-          <div class="gallery-item" onclick="openImage(this)"><img src="2.jpg" alt="Gallery 1" class="gallery-img"><div class="gallery-overlay">View Photo</div></div>
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="2.jpg" alt="Gallery 1" class="gallery-img">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
         </div>
         <div class="col-6 col-md-4">
-          <div class="gallery-item" onclick="openImage(this)"><img src="3.jpg" alt="Gallery 2" class="gallery-img"><div class="gallery-overlay">View Photo</div></div>
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="3.jpg" alt="Gallery 2" class="gallery-img">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
         </div>
         <div class="col-6 col-md-4">
-          <div class="gallery-item" onclick="openImage(this)"><img src="4.jpg" alt="Gallery 3" class="gallery-img"><div class="gallery-overlay">View Photo</div></div>
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="4.jpg" alt="Gallery 3" class="gallery-img">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
         </div>
         <div class="col-6 col-md-4">
-          <div class="gallery-item" onclick="openImage(this)"><img src="5.jpg" alt="Gallery 4" class="gallery-img"><div class="gallery-overlay">View Photo</div></div>
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="5.jpg" alt="Gallery 4" class="gallery-img">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
         </div>
         <div class="col-6 col-md-4">
-          <div class="gallery-item" onclick="openImage(this)"><img src="6.jpg" alt="Gallery 5" class="gallery-img"><div class="gallery-overlay">View Photo</div></div>
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="6.jpg" alt="Gallery 5" class="gallery-img">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
         </div>
         <div class="col-6 col-md-4">
-          <div class="gallery-item" onclick="openImage(this)"><img src="7.jpg" alt="Gallery 6" class="gallery-img"><div class="gallery-overlay">View Photo</div></div>
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="7.jpg" alt="Gallery 6" class="gallery-img">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="reminders" class="reminders-section section-padding floral-corner">
+  <div class="section-divider-heart">
+  <span class="section-divider-line"></span>
+  <span class="section-divider-icon">♡</span>
+  <span class="section-divider-line"></span>
+</div>
+
+  <section id="reminders" class="section-padding floral-corner">
     <div class="container">
       <h2 class="section-title">Gentle Reminders</h2>
-      <div class="row g-4 mt-3">
+      <p class="section-subtitle">A few thoughtful notes for a smooth and joyful celebration.</p>
+
+      <div class="row g-4 mt-2">
         <div class="col-md-4">
           <div class="soft-card reminder-card">
             <div class="icon">✿</div>
@@ -1021,26 +1665,32 @@
         <div class="col-md-4">
           <div class="soft-card reminder-card">
             <div class="icon">✿</div>
-            <h4>Stay Through the Celebration</h4>
+            <h4>Stay Through the Event</h4>
             <p>We hope you can remain with us until the end and enjoy the event from the vows to the final toast.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="soft-card reminder-card">
             <div class="icon">✿</div>
-            <h4>Celebrate With Us</h4>
-            <p>Smile, take photos, share kind words, and enjoy this beautiful day with us.</p>
+            <h4>Have Fun</h4>
+            <p>Smile, share kind words, celebrate with us, and enjoy every beautiful moment of the day.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="rsvp" class="rsvp-section section-padding floral-corner">
+  <div class="section-divider-heart">
+  <span class="section-divider-line"></span>
+  <span class="section-divider-icon">♡</span>
+  <span class="section-divider-line"></span>
+</div>
+
+  <section id="rsvp" class="section-padding floral-corner">
     <div class="container">
       <div class="soft-card rsvp-panel">
         <h2 class="rsvp-heading">We hope to see you from the altar.</h2>
-        <!-- <p class="rsvp-copy">We kindly request your response by July 20, 2025.</p> -->
+        <p class="rsvp-copy">We would be delighted to celebrate with you. Kindly respond through our RSVP form.</p>
         <div class="rsvp-cheers">Cheers!</div>
         <div class="rsvp-button-wrap">
           <a href="https://forms.google.com" target="_blank" class="rsvp-button">RSVP now</a>
@@ -1051,8 +1701,7 @@
 
   <footer>
     <div class="container">
-      <p class="mb-1">With love, Faulo & Marvie</p>
-      <!-- <small>Please replace placeholder names, times, venues, and the Google Form link with your final wedding details.</small> -->
+      <p class="mb-1">With love, Faulo &amp; Marvie</p>
     </div>
   </footer>
 
@@ -1070,33 +1719,26 @@
     const targetDate = new Date('2026-10-18T00:00:00').getTime();
 
     function updateCountdown() {
-       const targetDate = new Date('2026-10-18T00:00:00').getTime();
+      const now = new Date().getTime();
+      const distance = targetDate - now;
 
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
+      if (distance <= 0) {
+        document.getElementById('days').textContent = '00';
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+        return;
+      }
 
-    if (distance <= 0) {
-      document.getElementById('days').textContent = '00';
-      document.getElementById('hours').textContent = '00';
-      document.getElementById('minutes').textContent = '00';
-      document.getElementById('seconds').textContent = '00';
-      return;
-    }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
     }
 
     updateCountdown();
