@@ -7,23 +7,23 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #fcf8f4;
-      --bg-soft: #fffdf9;
-      --ink: #2a241f;
-      --muted: #756861;
-      --accent: #9b5f74;
-      --accent-deep: #7f4860;
-      --accent-soft: #f3d8df;
-      --butter: #f5e6ab;
-      --butter-soft: #fff6d5;
-      --blush: #f8e4e8;
-      --taupe: #d8c8bf;
-      --line: rgba(42, 36, 31, 0.10);
-      --shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
+      --bg: #fdf7f4;
+      --bg-soft: #ffffff;
+      --ink: #6f4b35;
+      --muted: #8f6f61;
+      --accent: #c88f8a;
+      --accent-deep: #ab746d;
+      --accent-soft: #f3d7d3;
+      --butter: #f3e3b8;
+      --butter-soft: #fbf4dc;
+      --blush: #f2d6d4;
+      --taupe: #ead9d1;
+      --line: rgba(111, 75, 53, 0.12);
+      --shadow: 0 14px 34px rgba(170, 129, 110, 0.10);
       --radius: 26px;
     }
 
@@ -32,8 +32,8 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #fffdf9 0%, #fcf8f4 45%, #faf4ee 100%);
+      font-family: 'Lora', serif;
+      background: #fdf7f4;
       color: var(--ink);
       line-height: 1.7;
       overflow-x: hidden;
@@ -46,6 +46,37 @@
       line-height: 1.1;
     }
 
+    p, li, a, label, input, textarea, select, .form-control, .form-select, .btn, .nav-link, .section-subtitle {
+      font-family: 'Lora', serif;
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    p, li {
+      line-height: 1.85;
+    }
+
+    /* //story */
+    #story{
+      background: #f4e5b6;
+    }
+
+    #celebration,
+    #entourage,
+    #gallery {
+      background: #ffffff;
+    }
+    #rsvp{
+      background: #f2d6d4;
+
+    }
+
+    #attire,
+    #reminders {
+      background: #f2d6d4;
+    }
+  
    .save-intro {
   text-align: center;
   margin-bottom: 1.4rem;
@@ -53,19 +84,19 @@
 
 .save-intro-line {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #b88b78;
   margin-bottom: 0.2rem;
 }
 
 .save-intro-names {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
   font-weight: 600;
-  color: var(--ink);
+  color: #9a6a45;
   line-height: 1;
   margin-bottom: 0.3rem;
 }
@@ -97,7 +128,7 @@
       content: '✿';
       position: absolute;
       font-size: 1rem;
-      color: rgba(155, 95, 116, 0.18);
+      color: rgba(200, 143, 138, 0.18);
       pointer-events: none;
     }
 
@@ -112,7 +143,7 @@
     }
 
     .navbar {
-      background: rgba(255, 252, 248, 0.95);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(155, 95, 116, 0.10);
     }
@@ -127,8 +158,8 @@
 
     .navbar-nav .nav-link {
       color: var(--ink) !important;
-      font-size: 0.92rem;
-      font-weight: 400;
+      font-size: 0.98rem;
+      font-weight: 500;
       letter-spacing: 0.03em;
     }
 
@@ -189,11 +220,12 @@
 
     .hero-name-box {
     display: inline-block;
-    background: linear-gradient(
+    /* background: linear-gradient(
       135deg,
       rgba(243, 216, 223, 0.28),
       rgba(245, 230, 171, 0.20)
-    );
+    ); */
+    background: rgba(255, 255, 255, 0.88);
     padding: 0.18rem 0.95rem;
     border: 1px solid rgba(255, 255, 255, 0.22);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
@@ -271,6 +303,7 @@
     }
 
     .section-title {
+      color: #9a6a45;
       font-size: clamp(2.1rem, 4vw, 3.35rem);
       font-weight: 500;
       text-align: center;
@@ -279,25 +312,28 @@
     }
 
     .section-kicker {
+      color: #b88b78;
       text-align: center;
       color: var(--accent);
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1rem, 2vw, 1.35rem);
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
       margin-bottom: 1.6rem;
       font-weight: 400;
     }
 
     .section-subtitle {
+      color: #a98575;
       text-align: center;
       max-width: 820px;
       margin: 0 auto 2rem;
       color: var(--muted);
-      font-weight: 300;
-      font-size: 0.98rem;
+      font-weight: 400;
+      font-size: 1.05rem;
     }
 
     .soft-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,248,244,0.82) 100%);
+      /* background: linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,248,244,0.82) 100%); */
+      background: #f2d6d4;
       border: 1px solid rgba(155, 95, 116, 0.09);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -306,7 +342,8 @@
     }
 
     .save-the-date {
-      background: linear-gradient(180deg, #fffdf9 0%, #fff8f0 60%, #fcf8f4 100%);
+      /* background: linear-gradient(180deg, #fffdf9 0%, #fff8f0 60%, #fcf8f4 100%); */
+      background-color: white;
     }
 
     .save-wrap {
@@ -327,7 +364,7 @@
     .save-icon-side {
       font-size: 1.6rem;
       line-height: 1;
-      color: var(--accent);
+      color: var(--accent-deep);
     }
 
     .save-icon-center {
@@ -338,34 +375,36 @@
     }
 
     .save-label {
-      letter-spacing: 0.13em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      font-size: 0.92rem;
-      color: var(--muted);
+      font-size: 0.82rem;
+      color: #b88b78;
       margin-bottom: 0.2rem;
     }
 
     .save-date-line {
       font-size: clamp(2.2rem, 5vw, 3.8rem);
-      font-weight: 400;
+      font-weight: 500;
       margin-bottom: 0.25rem;
+      color: #9a6a45;
     }
 
     .save-location {
-      font-size: clamp(1.05rem, 2vw, 1.55rem);
-      color: var(--accent);
+      font-size: clamp(1.05rem, 2vw, 1.45rem);
+      color: #b7897c;
       margin-bottom: 1.8rem;
       font-family: 'Cormorant Garamond', serif;
     }
 
     .countdown-wrap {
-      padding: 1.35rem 1rem;
-      border-top: 1px solid rgba(155, 95, 116, 0.18);
-      border-bottom: 1px solid rgba(155, 95, 116, 0.18);
-      background: linear-gradient(90deg, rgba(245,230,171,0.20), rgba(243,216,223,0.18));
+      padding: 1.8rem 1.2rem;
+      border-top: 1px solid rgba(200, 143, 138, 0.28);
+      border-bottom: 1px solid rgba(200, 143, 138, 0.28);
+      background: #ffffff;
       max-width: 820px;
       margin: 0 auto;
-      border-radius: 18px;
+      border-radius: 0;
+      box-shadow: none;
     }
 
     .countdown {
@@ -380,12 +419,13 @@
       font-size: clamp(2.1rem, 7vw, 4.6rem);
       font-weight: 500;
       line-height: 1;
+      color: #9a6a45;
     }
 
     .count-label {
       text-transform: uppercase;
       letter-spacing: 0.11em;
-      color: var(--muted);
+      color: #b88b78;
       font-size: 0.8rem;
       margin-top: 0.3rem;
     }
@@ -604,7 +644,8 @@
 
     .mini-card {
       border: 1px solid rgba(155, 95, 116, 0.14);
-      background: linear-gradient(180deg, rgba(255,247,236,0.82), rgba(255,255,255,0.72));
+      /* background: linear-gradient(180deg, rgba(255,247,236,0.82), rgba(255,255,255,0.72)); */
+      background: #f2d6d4;
       padding: 1rem 0.7rem;
       text-align: center;
       height: 100%;
@@ -947,7 +988,7 @@
     .reminder-card .icon {
       font-size: 2.3rem;
       margin-bottom: 0.7rem;
-      color: var(--accent);
+      color: var(--accent-deep);
     }
 
     .reminder-card h4 {
@@ -1024,7 +1065,7 @@
     }
 
     .rsvp-button:hover {
-      color: var(--accent);
+      color: var(--accent-deep);
     }
 
     .modal-content {
@@ -1118,7 +1159,591 @@
         text-align: center;
       }
     }
+
+    /* readability + section pattern refinements */
+    body {
+      font-size: 16.5px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .navbar-brand,
+    .section-title,
+    .save-intro-line,
+    .save-intro-names,
+    .save-date-line,
+    .count-number,
+    .story-title,
+    .detail-title,
+    .attire-title,
+    .entourage-main-title,
+    .gallery-title,
+    .rsvp-title {
+      color: #8f623f !important;
+    }
+
+    .navbar,
+    .hero-verse-box,
+    .countdown-wrap,
+    .soft-card,
+    .rsvp-form .form-control,
+    .rsvp-form .form-select,
+    .rsvp-form textarea {
+      background: rgba(255,255,255,0.94);
+    }
+
+    .save-the-date {
+      background-color: white;
+    }
+
+    #story {
+      background: #f3e3b8;
+    }
+
+    #celebration {
+      background: #ffffff;
+    }
+
+    #attire {
+      background: #f2d6d4;
+    }
+
+  
+    #gallery{
+      background: #f4e5b6;
+    }
+
+    #reminders {
+      background: white;
+    }
+
+    .section-kicker,
+    .save-label,
+    .count-label,
+    .hero-verse-ref,
+    .detail-meta,
+    .attire-note,
+    .gallery-note,
+    .rsvp-note {
+      color: #9b7b6c !important;
+    }
+
+    .section-subtitle,
+    .story-copy,
+    .detail-copy,
+    .attire-copy,
+    .entourage-copy,
+    .rsvp-copy,
+    .save-location,
+    .navbar-nav .nav-link {
+      color: #6f4b35 !important;
+    }
+
+    .soft-card,
+    .story-card,
+    .detail-card,
+    .attire-card,
+    .entourage-block,
+    .rsvp-card {
+      border-color: rgba(200, 143, 138, 0.22) !important;
+    }
+
+    .btn,
+    button,
+    .hero-rsvp-box,
+    .submit-btn,
+    .btn-primary {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-rsvp-box {
+      background: #e6b8b6 !important;
+      color: #fff !important;
+      border-color: rgba(230, 184, 182, 0.92) !important;
+    }
+
+    .submit-btn,
+    .btn-primary {
+      background: linear-gradient(180deg, #d4a04a 0%, #b98335 100%) !important;
+      color: #fff !important;
+      border-color: rgba(185, 131, 53, 0.85) !important;
+    }
+
+    .hero-rsvp-box:hover,
+    .submit-btn:hover,
+    .btn-primary:hover {
+      filter: brightness(0.98);
+      transform: translateY(-1px);
+    }
+
+    .rsvp-form input,
+    .rsvp-form select,
+    .rsvp-form textarea,
+    input,
+    select,
+    textarea {
+      color: #5d4331 !important;
+      border-color: rgba(200, 143, 138, 0.26) !important;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+      .section-subtitle,
+      p,
+      li {
+        font-size: 1rem;
+      }
+
+      .section-padding {
+        padding: 62px 0;
+      }
+
+      .celebration-content {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      .fact-item {
+        padding: 0.3rem 0.3rem 1rem;
+      }
+
+      .fact-item h3 {
+        font-size: 1.75rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .fact-item p {
+        font-size: 0.98rem;
+        line-height: 1.7;
+        padding: 0 0.2rem;
+      }
+
+      .faq-banner {
+        min-height: 88px;
+        margin: 0.6rem 0 1rem;
+      }
+
+      .faq-banner img {
+        height: 88px;
+      }
+
+      .reminder-icon-img {
+        max-width: 82px;
+        margin-bottom: 0.55rem;
+      }
+
+      .reminder-top-title {
+        font-size: 1.3rem;
+      }
+
+      .entourage-block .row.two-col-mobile > [class*="col-"] {
+        width: 50%;
+      }
+    }
+
+
+    /* entourage mobile layout and new reminders */
+    .entourage-block .row.two-col-mobile > [class*="col-"] {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+
+    .entourage-block .row.two-col-mobile {
+      --bs-gutter-x: 1rem;
+      --bs-gutter-y: 1rem;
+    }
+
+    .faq-banner {
+      width: 100%;
+      min-height: 110px;
+      overflow: hidden;
+      margin: 0.8rem 0 1.2rem;
+      box-shadow: var(--shadow);
+      background: #d9c1b1;
+    }
+
+    .faq-banner img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .facts-list {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .fact-item {
+      text-align: center;
+      padding: 0.5rem 0.4rem 1.15rem;
+    }
+
+    .fact-item h3 {
+      font-size: clamp(2rem, 3vw, 2.7rem);
+      color: #8f623f;
+      margin-bottom: 0.45rem;
+      text-transform: uppercase;
+    }
+
+    .fact-item p {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #6f4b35;
+    }
+
+    .reminder-top-icons .soft-card {
+      background: #ffffff;
+    }
+
+    .reminder-icon-img {
+      max-width: 110px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 0.7rem;
+      filter: grayscale(100%);
+    }
+
+    .reminder-top-title {
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+
+  
+    /* ===== Requested fixes ===== */
+
+    /* Mobile landing image should fit again */
+    @media (max-width: 768px) {
+      .hero,
+      .hero-section,
+      .landing-section,
+      .hero-banner,
+      .hero-image-wrap {
+        min-height: 100svh !important;
+        height: 100svh !important;
+        overflow: hidden !important;
+      }
+
+      .hero img,
+      .hero-banner img,
+      .hero-image,
+      .hero-bg {
+        width: 100% !important;
+        height: 100svh !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+      }
+
+      /* Bigger Faulo & Marvie card on mobile */
+      .hero-name-box,
+      .hero-name-wrap,
+      .couple-name-box,
+      .hero-title-box {
+        transform: scale(1.12) !important;
+        transform-origin: center !important;
+        margin-top: 0.35rem !important;
+        margin-bottom: 0.85rem !important;
+      }
+
+      .hero-name-box .line1,
+      .hero-name-wrap .line1,
+      .couple-name-box .line1,
+      .hero-title-box .line1,
+      .hero-name-box .line2,
+      .hero-name-wrap .line2,
+      .couple-name-box .line2,
+      .hero-title-box .line2 {
+        font-size: 2.15rem !important;
+        line-height: 1.02 !important;
+      }
+
+      /* FAQ spacing on mobile */
+      .faq-title {
+        margin-top: 1.65rem !important;
+        margin-bottom: 1.15rem !important;
+      }
+
+      /* Story spacing fixed again */
+      #story,
+      .story-section {
+        padding-bottom: 1.5rem !important;
+      }
+
+      .story-card,
+      .story-card-inner,
+      .story-text-card,
+      .story-copy-card {
+        margin-bottom: 0 !important;
+        padding-bottom: 0.75rem !important;
+      }
+
+      /* Story card blush pink */
+      .story-card,
+      .story-card-inner,
+      .story-text-card,
+      .story-copy-card,
+      #story .soft-card {
+        background: #f2d6d4 !important;
+      }
+
+      /* Better reminders icons on mobile */
+      .faq-top-grid .soft-card {
+        min-height: 150px !important;
+        padding: 1rem 0.55rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      .faq-icon-wrap {
+        width: 58px !important;
+        height: 58px !important;
+        border-radius: 50% !important;
+        background: #f8f1ed !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto 0.55rem !important;
+        border: 1px solid rgba(143,98,63,.12) !important;
+      }
+
+      .faq-icon-wrap i {
+        font-size: 1.45rem !important;
+        color: #8f623f !important;
+      }
+
+      .faq-top-title {
+        font-size: 1.08rem !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+      }
+
+      .fact-item p {
+        font-size: 1.04rem !important;
+        line-height: 1.72 !important;
+      }
+    }
+
+    /* Desktop/mobile text hierarchy */
+    .faq-title {
+      text-align: center !important;
+      font-size: clamp(2.5rem, 5vw, 4rem) !important;
+      margin: 1.75rem 0 1.45rem !important;
+      line-height: 1.08 !important;
+    }
+
+    .fact-item h3 {
+      font-size: clamp(1.75rem, 3.2vw, 2.45rem) !important;
+      line-height: 1.15 !important;
+      margin-bottom: 0.55rem !important;
+    }
+
+    .fact-item p {
+      font-size: clamp(1.08rem, 2.1vw, 1.28rem) !important;
+      line-height: 1.82 !important;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    /* Entourage alternating card colors */
+    #entourage .soft-card.entourage-block:nth-of-type(odd),
+    #entourage .entourage-block:nth-of-type(odd) {
+      background: #f2d6d4 !important;
+    }
+
+    #entourage .soft-card.entourage-block:nth-of-type(even),
+    #entourage .entourage-block:nth-of-type(even) {
+      background: #f4e5b6 !important;
+    }
+
+</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style id="reminders-section-only-patch">
+    #reminders {
+      background: #ffffff !important;
+      position: relative;
+    }
+
+    #reminders .section-title {
+      text-align: center;
+      color: #9a6a45;
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      line-height: 1.08;
+      margin-bottom: 1.5rem;
+    }
+
+    #reminders .faq-top-grid {
+      margin-top: 0.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    #reminders .reminder-card {
+      background: #fff;
+      border: 1px solid rgba(154, 106, 69, 0.14);
+      border-radius: 28px;
+      min-height: 190px;
+      padding: 1.35rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.03);
+    }
+
+    #reminders .reminder-card-inner {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+    }
+
+    #reminders .reminder-icon-wrap {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: #fbf5f2;
+      border: 1px solid rgba(154, 106, 69, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    #reminders .reminder-icon {
+      width: 34px;
+      height: 34px;
+      stroke: #9a6a45;
+      stroke-width: 1.8;
+      fill: none;
+    }
+
+    #reminders .reminder-label {
+      color: #8d5f3e;
+      font-size: clamp(1.35rem, 2vw, 2rem);
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    #reminders .faq-title {
+      text-align: center;
+      color: #9a6a45;
+      font-size: clamp(2.4rem, 4.6vw, 4.2rem);
+      line-height: 1.08;
+      margin: 2rem 0 1.4rem;
+    }
+
+    #reminders .facts-list {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    #reminders .fact-item {
+      text-align: center;
+      margin-bottom: 1.6rem;
+      padding: 0;
+    }
+
+    #reminders .fact-item:last-child {
+      margin-bottom: 0;
+    }
+
+    #reminders .fact-item h3 {
+      color: #9a6a45;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1.15;
+      margin-bottom: 0.55rem;
+      text-transform: uppercase;
+    }
+
+    #reminders .fact-item p {
+      max-width: 900px;
+      margin: 0 auto;
+      color: #6f4b35;
+      font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      #reminders {
+        padding-top: 56px;
+        padding-bottom: 56px;
+      }
+
+      #reminders .section-title {
+        font-size: 2.35rem;
+        margin-bottom: 1.15rem;
+      }
+
+      #reminders .faq-top-grid {
+        margin-bottom: 1.4rem;
+      }
+
+      #reminders .faq-top-grid > div {
+        margin-bottom: 0.75rem;
+      }
+
+      #reminders .reminder-card {
+        min-height: 150px;
+        border-radius: 22px;
+        padding: 1rem 0.55rem;
+      }
+
+      #reminders .reminder-card-inner {
+        gap: 0.6rem;
+      }
+
+      #reminders .reminder-icon-wrap {
+        width: 54px;
+        height: 54px;
+      }
+
+      #reminders .reminder-icon {
+        width: 26px;
+        height: 26px;
+      }
+
+      #reminders .reminder-label {
+        font-size: 1.05rem;
+        line-height: 1.18;
+      }
+
+      #reminders .faq-title {
+        font-size: 2.25rem;
+        margin-top: 1.6rem;
+        margin-bottom: 1rem;
+      }
+
+      #reminders .fact-item {
+        margin-bottom: 1.2rem;
+      }
+
+      #reminders .fact-item h3 {
+        font-size: 1.45rem;
+        margin-bottom: 0.35rem;
+      }
+
+      #reminders .fact-item p {
+        font-size: 1rem;
+        line-height: 1.72;
+        padding: 0 0.2rem;
+      }
+    }
   </style>
+
 </head>
 <body>
 
@@ -1155,8 +1780,8 @@
       <div class="hero-bottom-wrap">
         <a href="#rsvp" class="btn hero-rsvp-box">RSVP now</a>
         <div class="hero-verse-wrap">
-          <div class="hero-verse-box">He has made everything beautiful in its time.</div>
-          <div class="hero-verse-box hero-verse-ref">Ecclesiastes 3:11</div>
+          <div class="hero-verse-box"><strong>He has made everything beautiful in its time.</strong></div>
+          <div class="hero-verse-box hero-verse-ref"><strong>Ecclesiastes 3:11</strong></div>
         </div>
       </div>
     </div>
@@ -1206,29 +1831,24 @@
   </div>
 </section>
 
-<div class="section-divider-heart">
-  <span class="section-divider-line"></span>
-  <span class="section-divider-icon">♡</span>
-  <span class="section-divider-line"></span>
-</div>
 
 <section id="story" class="section-padding floral-corner">
   <div class="container">
-    <h2 class="section-title">Our Story</h2>
-    <p class="section-subtitle">It all started with chit chat- one ordinary day that turned extraordinary.</p>
+    <h2 class="section-title mb-5">Our Story</h2>
+    <!-- <p class="section-subtitle">It all started with chit chat- one ordinary day that turned extraordinary.</p> -->
 
     <div class="row g-4 align-items-stretch mb-5">
       <div class="col-lg-6">
         <div id="storyCarousel" class="carousel slide carousel-fade story-img-wrap" data-bs-ride="carousel" data-bs-interval="3500">
           <div class="carousel-inner h-100">
             <div class="carousel-item active h-100">
-              <img src="2.jpg" alt="Our Story 1" class="story-img d-block w-100">
+              <img src="4.jpg" alt="Our Story 1" class="story-img d-block w-100">
             </div>
             <div class="carousel-item h-100">
               <img src="3.jpg" alt="Our Story 2" class="story-img d-block w-100">
             </div>
             <div class="carousel-item h-100">
-              <img src="4.jpg" alt="Our Story 3" class="story-img d-block w-100">
+              <img src="2.jpg" alt="Our Story 3" class="story-img d-block w-100">
             </div>
           </div>
 
@@ -1263,11 +1883,6 @@
   </div>
 </section>  
 
-<div class="section-divider-heart">
-  <span class="section-divider-line"></span>
-  <span class="section-divider-icon">♡</span>
-  <span class="section-divider-line"></span>
-</div>
 
   <section id="celebration" class="section-padding floral-corner">
     <div class="container">
@@ -1332,11 +1947,6 @@
     </div>
   </section>
 
-  <div class="section-divider-heart">
-  <span class="section-divider-line"></span>
-  <span class="section-divider-icon">♡</span>
-  <span class="section-divider-line"></span>
-</div>
 
 <section id="attire" class="section-padding floral-corner">
   <div class="container">
@@ -1347,8 +1957,8 @@
       <div class="row g-5 align-items-center">
         <div class="col-lg-5">
           <div class="guide-copy-wrap">
-            <div class="guide-script">Your Guide</div>
-            <h3 class="guide-heading">On Attire</h3>
+            <!-- <div class="guide-script">Your Guide</div>
+            <h3 class="guide-heading">On Attire</h3> -->
 
             <p class="guide-copy guide-copy-first">
               Formal or semi-formal attire is warmly requested. We would truly appreciate our guests wearing polished pieces in soft and muted tones for a graceful and cohesive look.
@@ -1392,27 +2002,21 @@
   </div>
 </section>
 
-<div class="section-divider-heart">
-  <span class="section-divider-line"></span>
-  <span class="section-divider-icon">♡</span>
-  <span class="section-divider-line"></span>
-</div>
-
  <section id="entourage" class="entourage-section section-padding floral-corner">
   <div class="container">
     <h2 class="section-title">The Entourage</h2>
     <p class="section-kicker">Our dearest family and friends who stand with us on this special day.</p>
 
-    <div class="soft-card entourage-block mb-4 floral-corner">
-      <div class="row g-4 mt-1">
-        <div class="col-md-6">
+    <div class="soft-card entourage-block mb-4 floral-corner" style="background:#f2d6d4 !important;">
+      <div class="row g-4 mt-1 two-col-mobile">
+        <div class="col-6 col-md-6">
           <h4 class="entourage-group-title">Groom’s Parents</h4>
           <ul class="name-list small">
             <li>Mr. Fausto Ramos</li>
             <li>Mrs. Lota Ramos</li>
           </ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-6 col-md-6">
           <h4 class="entourage-group-title">Bride’s Parents</h4>
           <ul class="name-list small">
             <li>Mr. Roberto Jaravelo</li>
@@ -1422,11 +2026,11 @@
       </div>
     </div>
 
-      <div class="soft-card entourage-block mb-4 floral-corner">
+      <div class="soft-card entourage-block mb-4 floral-corner" style="background:#f4e5b6 !important;">
         <div class="entourage-card-header">Our Life Godparents</div>
         <div class="entourage-subtext">To stand as principal witnesses in our exchange of vows...</div>
-        <div class="row g-4">
-          <div class="col-md-6">
+        <div class="row g-4 two-col-mobile">
+          <div class="col-6 col-md-6">
             <ul class="name-list small">
               <li>Pastor Roberto Fajarda</li>
               <li>Mr. Aguinaldo Cacatian</li>
@@ -1443,7 +2047,7 @@
               <li>Mrs. Yvonne Talabucon</li>
             </ul>
           </div>
-          <div class="col-md-6">
+          <div class="col-6 col-md-6">
             <ul class="name-list small">
               <li>Mrs. Marife Fajarda</li>
               <li>Luzviminda Cacatain</li>
@@ -1464,17 +2068,17 @@
         </div>
       </div>
 
-      <div class="soft-card entourage-block mb-4 floral-corner">
+      <div class="soft-card entourage-block mb-4 floral-corner" style="background:#f2d6d4 !important;">
         <div class="entourage-card-header">Our Secondary Sponsors</div>
         <div class="entourage-subtext">To assist us in our needs...</div>
-        <div class="row g-4 mb-2">
-          <div class="col-md-6">
+        <div class="row g-4 mb-2 two-col-mobile">
+          <div class="col-6 col-md-6">
             <h4 class="entourage-group-title">Best Man</h4>
             <ul class="name-list small">
               <li>Mr. Orlan Sison</li>
             </ul>
           </div>
-          <div class="col-md-6">
+          <div class="col-6 col-md-6">
             <h4 class="entourage-group-title">Maid of Honor</h4>
             <ul class="name-list small">
               <li>Ms. Christine Charito</li>
@@ -1483,12 +2087,12 @@
         </div>
       </div>
 
-      <div class="soft-card entourage-block mb-4 floral-corner">
+      <div class="soft-card entourage-block mb-4 floral-corner" style="background:#f4e5b6 !important;">
         <div class="entourage-card-header">Our Secondary Sponsors</div>
         <div class="entourage-subtext">To guide us on our way...</div>
 
-        <div class="row g-4 mb-4">
-          <div class="col-md-6">
+        <div class="row g-4 mb-4 two-col-mobile">
+          <div class="col-6 col-md-6">
             <h4 class="entourage-group-title">Groomsmen</h4>
             <ul class="name-list small">
               <li>Mr. Dominic Dawat</li>
@@ -1502,7 +2106,7 @@
               <li>Mr. Archie Cacatian</li>
             </ul>
           </div>
-          <div class="col-md-6">
+          <div class="col-6 col-md-6">
             <h4 class="entourage-group-title">Bridesmaids</h4>
             <ul class="name-list small">
               <li>Ms. Ana Luna Cacatian</li>
@@ -1518,15 +2122,15 @@
           </div>
         </div>
 
-        <div class="row g-4 mb-4">
-          <div class="col-md-6">
+        <div class="row g-4 mb-4 two-col-mobile">
+          <div class="col-6 col-md-6">
             <h4 class="entourage-group-title">Candle</h4>
             <ul class="name-list small">
               <li>Mr. Mark Jaravelo</li>
               <li>Mrs. Lorelie Jaravelo</li>
             </ul>
           </div>
-          <div class="col-md-6">
+          <div class="col-6 col-md-6">
             <h4 class="entourage-group-title">Veil</h4>
             <ul class="name-list small">
               <li>Mr. Nikki Mopada</li>
@@ -1546,7 +2150,7 @@
         </div>
       </div>
 
-      <div class="soft-card entourage-block mb-4 floral-corner">
+      <div class="soft-card entourage-block mb-4 floral-corner" style="background:#f2d6d4 !important;">
         <div class="entourage-card-header">Our Symbol Bearers</div>
         <div class="entourage-subtext">To carry our symbol of Love, Treasure, and Faith</div>
 
@@ -1559,7 +2163,7 @@
           </div>
         </div>
 
-        <div class="row g-4 justify-content-center">
+        <div class="row g-4 justify-content-center two-col-mobile">
           <div class="col-md-4">
             <h4 class="entourage-group-title">Ring Bearer</h4>
             <ul class="name-list small">
@@ -1575,7 +2179,7 @@
         </div>
       </div>
 
-      <div class="soft-card entourage-block floral-corner">
+      <div class="soft-card entourage-block floral-corner" style="background:#f4e5b6 !important;">
         <div class="entourage-card-header">Our Flower Girls</div>
         <div class="entourage-subtext">To shower us with love blooms</div>
         <div class="row justify-content-center">
@@ -1592,17 +2196,12 @@
     </div>
   </section>
 
-  <div class="section-divider-heart">
-  <span class="section-divider-line"></span>
-  <span class="section-divider-icon">♡</span>
-  <span class="section-divider-line"></span>
-</div>
 
   <section id="gallery" class="section-padding floral-corner">
     <div class="container">
       <h2 class="section-title">Gallery</h2>
       <p class="section-subtitle">Click any photo for a closer look.</p>
-      <div class="row g-4">
+      <div class="row g-4 two-col-mobile">
         <div class="col-6 col-md-4">
           <div class="gallery-item" onclick="openImage(this)">
             <img src="2.jpg" alt="Gallery 1" class="gallery-img">
@@ -1643,48 +2242,145 @@
     </div>
   </section>
 
-  <div class="section-divider-heart">
-  <span class="section-divider-line"></span>
-  <span class="section-divider-icon">♡</span>
-  <span class="section-divider-line"></span>
-</div>
 
+
+  
+  
+  
   <section id="reminders" class="section-padding floral-corner">
     <div class="container">
       <h2 class="section-title">Gentle Reminders</h2>
-      <p class="section-subtitle">A few thoughtful notes for a smooth and joyful celebration.</p>
 
-      <div class="row g-4 mt-2">
-        <div class="col-md-4">
-          <div class="soft-card reminder-card">
-            <div class="icon">✿</div>
-            <h4>Be On Time</h4>
-            <p>Please arrive early so you can be comfortably seated before the ceremony begins.</p>
+      <div class="row g-3 g-md-4 faq-top-grid">
+        <div class="col-4">
+          <div class="reminder-card">
+            <div class="reminder-card-inner">
+              <div class="reminder-icon-wrap">
+                <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="13" r="8"></circle>
+                  <path d="M12 9v4l3 2"></path>
+                  <path d="M7 3 4.5 5.5"></path>
+                  <path d="M17 3l2.5 2.5"></path>
+                </svg>
+              </div>
+              <h4 class="reminder-label">Be On Time</h4>
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="soft-card reminder-card">
-            <div class="icon">✿</div>
-            <h4>Stay Through the Event</h4>
-            <p>We hope you can remain with us until the end and enjoy the event from the vows to the final toast.</p>
+
+        <div class="col-4">
+          <div class="reminder-card">
+            <div class="reminder-card-inner">
+              <div class="reminder-icon-wrap">
+                <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 14c2-1 3.5-3.5 4-6 2 1 3 2.5 3.5 4.5"></path>
+                  <path d="M13 8c1 1 2 2 2.5 3.5 1-.5 2-.5 3.5 0"></path>
+                  <path d="M6 18c2.5-1.5 4.5-2 6-2s3.5.5 6 2"></path>
+                  <path d="M9.5 12.5 8 14"></path>
+                  <path d="M14.5 11.5 16 13"></path>
+                  <path d="M12 5V3"></path>
+                </svg>
+              </div>
+              <h4 class="reminder-label">Finish the Event</h4>
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="soft-card reminder-card">
-            <div class="icon">✿</div>
-            <h4>Have Fun</h4>
-            <p>Smile, share kind words, celebrate with us, and enjoy every beautiful moment of the day.</p>
+
+        <div class="col-4">
+          <div class="reminder-card">
+            <div class="reminder-card-inner">
+              <div class="reminder-icon-wrap">
+                <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 20s-6.5-4.2-8.5-8A4.9 4.9 0 0 1 8 5.5c1.7 0 3 1 4 2.2 1-1.2 2.3-2.2 4-2.2a4.9 4.9 0 0 1 4.5 6.5C18.5 15.8 12 20 12 20z"></path>
+                </svg>
+              </div>
+              <h4 class="reminder-label">Have Fun</h4>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <h3 class="faq-title">FAQ's</h3>
+
+      <div class="facts-list">
+        <div class="fact-item">
+          <h3>Plus One</h3>
+          <p>
+            Due to limited space, we are only able to accommodate those guests formally invited on our
+            wedding invitation. We want to be surrounded by our families, friends, familiar faces,
+            meaning we can only take those who are invited. Please refer to the number of seats allotted
+            for you. Thank you for your understanding.
+          </p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Kids</h3>
+          <p>
+            We love children, but we cannot accommodate them at the venue. This is an adults-only affair.
+            The only kids attending are those who are part of the entourage and those only requested.
+            We hope you understand.
+          </p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Parking</h3>
+          <p>
+            Parking space is available in the vicinity. It is inside our venue. Kindly seek assistance
+            from traffic enforcement personnel for guidance.
+          </p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Arrival Timing</h3>
+          <p>
+            The ceremony begins promptly at 3:00 PM, with the entourage walk starting at 2:30 PM.
+            Please plan to arrive at 2:00 PM to allow ample time for parking and finding your seat.
+          </p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Leave Time</h3>
+          <p>
+            Please do not eat and run. It took us months to plan our wedding. Stay with us until the end
+            of the program. If you must leave early, please personally come to thank us and bid goodbye
+            before you go, perhaps not until our same day edit video is played.
+          </p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Photo/Video</h3>
+          <p>
+            We want photos and videos captured from our day, especially from our friends’ and families’
+            point of view. Meanwhile, during the ceremony, we kindly ask that you refrain from taking
+            photos and videos as we want to savor the solemnity of the moment and honor God as we receive
+            His blessing.
+          </p>
+        </div>
+
+        <div class="fact-item">
+          <h3>RSVP</h3>
+          <p>
+            Unfortunately, if we do not receive your RSVP by the specified date, you will not be able
+            to attend. If you were to show up without submitting an RSVP, there would be no seat for you.
+            If you need to update your RSVP, simply send us a message.
+          </p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Pets</h3>
+          <p>
+            Even if we love pets so much, we are sorry to inform you that the ceremony venue does not
+            allow any pets in the area, and we also want to keep the same vibe and solemnity during the
+            reception, so we are hoping for your understanding about this.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider-heart">
-  <span class="section-divider-line"></span>
-  <span class="section-divider-icon">♡</span>
-  <span class="section-divider-line"></span>
-</div>
+
+
+
 
   <section id="rsvp" class="section-padding floral-corner">
     <div class="container">
