@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faulo & Marvie | Wedding Invitation</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#6f4b35;
+      --muted:#8f6f61;
+      --accent:#c88f8a;
+      --accent-deep:#ab746d;
+      --blush:#f2d6d4;
+      --butter:#f3e3b8;
+      --line:rgba(111,75,53,.12);
+      --shadow:0 14px 34px rgba(170,129,110,.10);
+      --radius:24px;
+      --nav-h:82px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family:'Lora', serif;
+      color:var(--ink);
+      background:#fdf7f4;
+      line-height:1.75;
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    h1,h2,h3,h4,h5,h6,.display-font{
+      font-family:'Cormorant Garamond', serif;
+      color:var(--ink);
+      line-height:1.08;
+      margin-bottom:.6rem;
+    }
+
+    p,li,a,button,input,select,textarea{
+      font-family:'Lora', serif;
+      color:var(--ink);
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .section-padding{
+      padding:88px 0;
+      position:relative;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:clamp(2.1rem,4vw,3.4rem);
+      color:#8f623f;
+      margin-bottom:.55rem;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:820px;
+      margin:0 auto 2rem;
+      color:var(--muted);
+      font-size:1.03rem;
+    }
+
+    .section-kicker{
+      text-align:center;
+      color:#9b7b6c;
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(1.05rem,2vw,1.35rem);
+      margin-bottom:1.35rem;
+    }
+
+    .soft-card{
+      background:#fff;
+      border:1px solid rgba(200,143,138,.22);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+
+    .floral-corner::before,
+    .floral-corner::after{
+      content:'✿';
+      position:absolute;
+      font-size:1rem;
+      color:rgba(200,143,138,.18);
+      pointer-events:none;
+      z-index:1;
+    }
+
+    .floral-corner::before{ top:14px; left:16px; }
+    .floral-corner::after{ bottom:14px; right:16px; }
+
+    /* preserved section background colors */
+    .save-the-date{ background:#fff; }
+    #story{ background:#f3e3b8; }
+    #celebration{ background:#fff; }
+    #attire{ background:#f2d6d4; }
+    #entourage{ background:#fff; }
+    #gallery{ background:#f4e5b6; }
+    #reminders{ background:#fff; }
+    #rsvp{ background:#f2d6d4; }
+
+    /* navbar */
+    .navbar{
+      background:rgba(242,214,212,.92);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(155,95,116,.10);
+      min-height:var(--nav-h);
+    }
+
+    .nav-logo{
+      height:60px;
+      width:auto;
+      object-fit:contain;
+    }
+
+    .navbar-nav .nav-link{
+      color:var(--ink)!important;
+      font-size:.96rem;
+      font-weight:500;
+      letter-spacing:.03em;
+    }
+
+    .navbar-nav .nav-link:hover{
+      color:var(--accent)!important;
+    }
+
+    .navbar-toggler{
+      border-color:rgba(111,75,53,.18);
+    }
+
+    .navbar-toggler:focus{
+      box-shadow:none;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100svh;
+      padding-top:var(--nav-h);
+      position:relative;
+      display:flex;
+      align-items:center;
+      background:
+        linear-gradient(rgba(28,21,16,.42), rgba(28,21,16,.52)),
+        url('1.jpg') center center / cover no-repeat;
+      isolation:isolate;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 50% 32%, rgba(255,255,255,.08), transparent 40%),
+        linear-gradient(to bottom, rgba(0,0,0,.06), rgba(0,0,0,.18));
+      z-index:0;
+      pointer-events:none;
+    }
+
+    .hero .container{
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-wrap{
+      min-height:calc(100svh - var(--nav-h));
+      display:grid;
+      place-items:center;
+      padding:2rem 0;
+    }
+
+    .hero-panel{
+      width:min(100%, 760px);
+      padding:clamp(1.25rem, 3vw, 2rem);
+      border-radius:28px;
+      background:rgba(255,255,255,.16);
+      backdrop-filter:blur(8px);
+      -webkit-backdrop-filter:blur(8px);
+      border:1px solid rgba(255,255,255,.28);
+      box-shadow:0 12px 40px rgba(0,0,0,.14);
+      text-align:center;
+    }
+
+    .hero-overline{
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:#fff7f2;
+      font-size:.78rem;
+      margin-bottom:.55rem;
+    }
+
+    .hero-names{
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(3rem, 8vw, 5.6rem);
+      line-height:.95;
+      color:#fff;
+      margin:0 0 .7rem;
+      text-shadow:0 2px 18px rgba(0,0,0,.28);
+    }
+
+    .hero-date{
+      font-family:'Cormorant Garamond', serif;
+      color:#fff;
+      font-size:clamp(1.15rem, 2.6vw, 1.7rem);
+      margin-bottom:.45rem;
+    }
+
+    .hero-place{
+      color:rgba(255,255,255,.92);
+      max-width:42rem;
+      margin:0 auto 1.2rem;
+      font-size:1rem;
+    }
+
+    .hero-actions{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:.75rem;
+      margin-bottom:1rem;
+    }
+
+    .hero-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:180px;
+      padding:.78rem 1.35rem;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      font-size:.9rem;
+      transition:.25s ease;
+    }
+
+    .hero-btn-primary{
+      background:#e6b8b6;
+      color:#fff;
+      border:1px solid rgba(230,184,182,.94);
+    }
+
+    .hero-btn-primary:hover{
+      color:#fff;
+      transform:translateY(-1px);
+      filter:brightness(.98);
+    }
+
+    .hero-btn-secondary{
+      background:rgba(255,255,255,.14);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.42);
+    }
+
+    .hero-btn-secondary:hover{
+      color:#fff;
+      background:rgba(255,255,255,.20);
+    }
+
+    .hero-verse{
+      display:inline-block;
+      padding:.75rem 1rem;
+      border-radius:18px;
+      background:rgba(255,255,255,.92);
+      color:#2d2d2d;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      max-width:520px;
+      font-size:.97rem;
+      line-height:1.55;
+    }
+
+    .hero-verse strong{
+      display:block;
+      font-family:'Cormorant Garamond', serif;
+      font-size:1.15rem;
+      color:#3b2a20;
+    }
+
+    .hero-verse span{
+      display:block;
+      color:#8d6b5f;
+      margin-top:.2rem;
+      font-size:.92rem;
+    }
+
+    /* save the date */
+    .save-wrap{
+      max-width:980px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .save-icon-row{
+      display:flex;
+      justify-content:center;
+      gap:1rem;
+      align-items:center;
+      margin-bottom:.85rem;
+    }
+
+    .save-icon-side{
+      font-size:1.5rem;
+      color:#ab746d;
+    }
+
+    .save-icon-center{
+      font-size:2.8rem;
+      color:var(--ink);
+    }
+
+    .save-intro-line{
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(1rem,2vw,1.2rem);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:#b88b78;
+      margin-bottom:.15rem;
+    }
+
+    .save-intro-names{
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(2.6rem,6vw,4.8rem);
+      font-weight:600;
+      color:#9a6a45;
+      line-height:1;
+      margin-bottom:.4rem;
+    }
+
+    .save-label{
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-size:.8rem;
+      color:#b88b78;
+      margin-bottom:.2rem;
+    }
+
+    .save-date-line{
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(1.8rem,4vw,3.2rem);
+      color:#9a6a45;
+      margin-bottom:.25rem;
+    }
+
+    .save-location{
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(1rem,2vw,1.3rem);
+      color:#b7897c;
+      margin-bottom:1.65rem;
+    }
+
+    .countdown-wrap{
+      background:#fff;
+      max-width:820px;
+      margin:0 auto;
+      border-top:1px solid rgba(200,143,138,.28);
+      border-bottom:1px solid rgba(200,143,138,.28);
+      padding:1.4rem 1rem;
+    }
+
+    .countdown{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:.65rem;
+      text-align:center;
+    }
+
+    .count-number{
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(2rem, 6vw, 4.2rem);
+      color:#9a6a45;
+      line-height:1;
+    }
+
+    .count-label{
+      text-transform:uppercase;
+      font-size:.78rem;
+      color:#b88b78;
+      letter-spacing:.11em;
+      margin-top:.25rem;
+    }
+
+    /* story */
+    .story-img-wrap{
+      min-height:520px;
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      position:relative;
+      height:100%;
+    }
+
+    .story-img-wrap .carousel-inner,
+    .story-img-wrap .carousel-item{
+      height:100%;
+    }
+
+    .story-img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .story-card{
+      height:100%;
+      border-radius:30px;
+      background:#f2d6d4;
+      border:1.5px solid rgba(243,216,223,.55);
+      box-shadow:0 14px 34px rgba(0,0,0,.06), 0 0 0 6px rgba(245,230,171,.10);
+    }
+
+    .story-card-inner{
+      padding:2.5rem 2.2rem;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .story-step{
+      padding-left:1rem;
+      border-left:2px solid rgba(243,216,223,.55);
+      margin-bottom:1.15rem;
+    }
+
+    .story-step:last-child{ margin-bottom:0; }
+    .story-step p{ margin:0; font-size:1.08rem; }
+
+    .story-carousel-btn{
+      width:42px;
+      opacity:0;
+      transition:opacity .25s ease;
+    }
+
+    .story-img-wrap:hover .story-carousel-btn{
+      opacity:1;
+    }
+
+    .story-carousel-btn .carousel-control-prev-icon,
+    .story-carousel-btn .carousel-control-next-icon{
+      background-color:rgba(255,255,255,.46);
+      border-radius:50%;
+      background-size:55% 55%;
+      width:2.2rem;
+      height:2.2rem;
+      backdrop-filter:blur(3px);
+    }
+
+    /* celebration */
+    .celebration-card{
+      padding:1.25rem;
+      background:linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,247,240,.9));
+    }
+
+    .celebration-visual{
+      height:100%;
+      min-height:340px;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .celebration-visual img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .celebration-content{
+      padding:1rem 1rem 1rem 2rem;
+      height:100%;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      font-size:.78rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:.6rem;
+    }
+
+    .detail-title{
+      font-size:1.8rem;
+      color:#8f623f;
+    }
+
+    .detail-meta{
+      color:#9b7b6c;
+      margin-bottom:.85rem;
+      font-size:.95rem;
+    }
+
+    .mini-card{
+      height:100%;
+      border-radius:18px;
+      border:1px solid rgba(155,95,116,.14);
+      background:#f2d6d4;
+      padding:1rem .75rem;
+      text-align:center;
+    }
+
+    .mini-card h4{
+      font-size:1.2rem;
+      color:var(--accent-deep);
+      margin-bottom:.25rem;
+    }
+
+    .mini-card p{
+      margin:0;
+      font-family:'Cormorant Garamond', serif;
+      font-size:1.1rem;
+    }
+
+    .map-frame{
+      width:100%;
+      border:0;
+      height:240px;
+      border-radius:18px;
+      margin-top:.8rem;
+    }
+
+    /* attire */
+    .guide-card{
+      background:linear-gradient(180deg, rgba(255,252,249,.96), rgba(255,246,240,.94));
+      border-radius:30px;
+      padding:2.2rem;
+    }
+
+    .guide-copy{
+      font-size:1rem;
+      color:var(--ink);
+    }
+
+    .palette-strip{
+      background:rgba(255,255,255,.78);
+      border:1px solid rgba(42,36,31,.10);
+      padding:1rem 1rem .9rem;
+      margin-bottom:1rem;
+    }
+
+    .swatches{
+      display:flex;
+      gap:.75rem;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-bottom:.7rem;
+    }
+
+    .swatch{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      border:1px solid rgba(17,17,17,.08);
+      box-shadow:0 3px 8px rgba(0,0,0,.05);
+    }
+
+    .palette-caption,
+    .guide-note-small{
+      text-align:center;
+      color:var(--muted);
+      font-size:.86rem;
+      line-height:1.55;
+      margin:0;
+    }
+
+    .guide-no-row{
+      display:flex;
+      justify-content:center;
+      gap:.7rem;
+      flex-wrap:wrap;
+      margin-top:.2rem;
+    }
+
+    .swatch.x-mark{
+      position:relative;
+    }
+
+    .swatch.x-mark::before,
+    .swatch.x-mark::after{
+      content:'';
+      position:absolute;
+      width:56px;
+      height:4px;
+      background:#000;
+      top:50%;
+      left:50%;
+      border-radius:999px;
+      transform-origin:center;
+    }
+
+    .swatch.x-mark::before{ transform:translate(-50%,-50%) rotate(32deg); }
+    .swatch.x-mark::after{ transform:translate(-50%,-50%) rotate(-32deg); }
+
+    /* entourage */
+    .entourage-block{
+      padding:1.55rem 1rem;
+      border:1px solid rgba(155,95,116,.11);
+      margin-bottom:1.2rem;
+    }
+
+    .entourage-block.pink{ background:#f2d6d4; }
+    .entourage-block.butter{ background:#f4e5b6; }
+
+    .entourage-card-header{
+      text-align:center;
+      font-size:clamp(2rem, 4vw, 3.1rem);
+      color:#8f623f;
+      margin-bottom:.45rem;
+    }
+
+    .entourage-subtext{
+      text-align:center;
+      color:var(--accent);
+      font-family:'Cormorant Garamond', serif;
+      font-size:1rem;
+      font-style:italic;
+      margin-bottom:1rem;
+    }
+
+    .entourage-group-title{
+      text-align:center;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+      font-size:clamp(1.05rem,2vw,1.4rem);
+      color:var(--accent-deep);
+      margin-bottom:.4rem;
+    }
+
+    .name-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      text-align:center;
+    }
+
+    .name-list li{
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(1rem,1.8vw,1.2rem);
+      line-height:1.45;
+      margin-bottom:.08rem;
+    }
+
+    /* gallery */
+    .gallery-item{
+      position:relative;
+      overflow:hidden;
+      border-radius:22px;
+      cursor:pointer;
+      box-shadow:var(--shadow);
+      height:250px;
+      background:#efe8e3;
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .35s ease;
+    }
+
+    .gallery-item:hover img{
+      transform:scale(1.05);
+    }
+
+    .gallery-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,.34), rgba(0,0,0,.02));
+      display:flex;
+      align-items:flex-end;
+      padding:1rem;
+      color:#fff;
+      opacity:0;
+      transition:opacity .25s ease;
+      font-family:'Cormorant Garamond', serif;
+      font-size:1.05rem;
+    }
+
+    .gallery-item:hover .gallery-overlay{
+      opacity:1;
+    }
+
+    /* reminders */
+    .faq-top-grid{
+      margin-top:.5rem;
+      margin-bottom:1.8rem;
+    }
+
+    .reminder-card{
+      background:#fff;
+      border:1px solid rgba(154,106,69,.14);
+      border-radius:28px;
+      min-height:185px;
+      padding:1.2rem .9rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      box-shadow:0 10px 24px rgba(0,0,0,.03);
+      height:100%;
+    }
+
+    .reminder-card-inner{
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:.8rem;
+    }
+
+    .reminder-icon-wrap{
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      background:#fbf5f2;
+      border:1px solid rgba(154,106,69,.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto;
+    }
+
+    .reminder-icon{
+      width:32px;
+      height:32px;
+      stroke:#9a6a45;
+      stroke-width:1.8;
+      fill:none;
+    }
+
+    .reminder-label{
+      color:#8d5f3e;
+      font-size:clamp(1.25rem,2vw,1.85rem);
+      line-height:1.15;
+      margin:0;
+      font-family:'Cormorant Garamond', serif;
+    }
+
+    .faq-title{
+      text-align:center;
+      color:#9a6a45;
+      font-size:clamp(2.3rem,4.6vw,4rem);
+      line-height:1.08;
+      margin:2rem 0 1.3rem;
+      font-family:'Cormorant Garamond', serif;
+    }
+
+    .facts-list{
+      max-width:980px;
+      margin:0 auto;
+    }
+
+    .fact-item{
+      text-align:center;
+      margin-bottom:1.45rem;
+      padding:0;
+    }
+
+    .fact-item:last-child{ margin-bottom:0; }
+
+    .fact-item h3{
+      color:#9a6a45;
+      font-size:clamp(1.55rem,3vw,2.2rem);
+      line-height:1.15;
+      margin-bottom:.45rem;
+      text-transform:uppercase;
+      font-family:'Cormorant Garamond', serif;
+    }
+
+    .fact-item p{
+      max-width:900px;
+      margin:0 auto;
+      color:#6f4b35;
+      font-size:clamp(1rem,1.5vw,1.16rem);
+      line-height:1.8;
+    }
+
+    /* rsvp */
+    .rsvp-panel{
+      text-align:center;
+      padding:2rem 1.1rem;
+      border-top:2px solid var(--accent);
+      position:relative;
+      background:linear-gradient(180deg, rgba(255,251,246,.95), rgba(255,247,236,.92));
+    }
+
+    .rsvp-panel::before,
+    .rsvp-panel::after{
+      content:'✿';
+      position:absolute;
+      top:16px;
+      font-size:.95rem;
+      color:rgba(155,95,116,.45);
+    }
+
+    .rsvp-panel::before{ left:22px; }
+    .rsvp-panel::after{ right:22px; }
+
+    .rsvp-heading{
+      font-size:clamp(1.9rem,4vw,2.8rem);
+      color:#8f623f;
+      margin-bottom:.8rem;
+    }
+
+    .rsvp-copy{
+      max-width:700px;
+      margin:0 auto .8rem;
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(1.05rem,2vw,1.35rem);
+    }
+
+    .rsvp-cheers{
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(1.05rem,2vw,1.35rem);
+      margin-bottom:1rem;
+    }
+
+    .rsvp-button-wrap{
+      display:inline-block;
+      border:1px solid rgba(17,17,17,.35);
+      padding:.28rem;
+    }
+
+    .rsvp-button{
+      display:inline-block;
+      min-width:220px;
+      padding:.58rem 1.2rem;
+      color:var(--ink);
+      font-family:'Cormorant Garamond', serif;
+      font-size:clamp(1.2rem,2vw,1.6rem);
+      font-weight:600;
+      text-decoration:underline;
+      text-underline-offset:4px;
+      background:transparent;
+      border:none;
+    }
+
+    .rsvp-button:hover{
+      color:var(--accent-deep);
+    }
+
+    footer{
+      text-align:center;
+      padding:2rem 0 3rem;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      background:linear-gradient(180deg, #fffaf4, #fcf7ef);
+    }
+
+    .modal-content{
+      background:transparent;
+      border:none;
+    }
+
+    .modal-image{
+      width:100%;
+      max-height:82vh;
+      object-fit:contain;
+      border-radius:20px;
+    }
+
+    /* mobile */
+    @media (max-width: 991.98px){
+      .section-padding{ padding:72px 0; }
+      .story-img-wrap{ min-height:380px; }
+      .celebration-visual{ min-height:260px; margin-bottom:1rem; }
+      .celebration-content{ padding:1rem .35rem 0; }
+    }
+
+    @media (max-width: 767.98px){
+      :root{ --nav-h:74px; }
+
+      .nav-logo{ height:52px; }
+
+      .hero{
+        min-height:100svh;
+        background:
+          linear-gradient(rgba(18,13,10,.50), rgba(18,13,10,.58)),
+          url('1.jpg') center center / cover no-repeat;
+      }
+
+      .hero-wrap{
+        min-height:calc(100svh - var(--nav-h));
+        padding:1rem 0 1.5rem;
+      }
+
+      .hero-panel{
+        border-radius:22px;
+        padding:1rem;
+      }
+
+      .hero-names{
+        font-size:clamp(2.6rem, 12vw, 4.2rem);
+      }
+
+      .hero-place{
+        font-size:.95rem;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .hero-btn{
+        width:100%;
+        min-width:0;
+      }
+
+      .countdown{
+        grid-template-columns:repeat(2,1fr);
+        row-gap:1rem;
+      }
+
+      .story-img-wrap{
+        min-height:260px;
+        border-radius:24px;
+      }
+
+      .story-card{
+        border-radius:24px;
+      }
+
+      .story-card-inner{
+        padding:1.35rem 1rem;
+      }
+
+      .story-step p{
+        font-size:.98rem;
+      }
+
+      .story-carousel-btn{
+        opacity:1;
+        width:36px;
+      }
+
+      .story-carousel-btn .carousel-control-prev-icon,
+      .story-carousel-btn .carousel-control-next-icon{
+        width:2rem;
+        height:2rem;
+      }
+
+      .guide-card{
+        padding:1.4rem 1rem;
+      }
+
+      .swatch{
+        width:34px;
+        height:34px;
+      }
+
+      .swatch.x-mark::before,
+      .swatch.x-mark::after{
+        width:48px;
+      }
+
+      .entourage-mobile-2 > [class*="col-"]{
+        width:50%;
+        flex:0 0 auto;
+      }
+
+      .gallery-item{
+        height:200px;
+      }
+
+      .gallery-overlay{
+        opacity:1;
+        background:linear-gradient(to top, rgba(0,0,0,.28), rgba(0,0,0,.03));
+      }
+
+      .faq-top-grid .col-4{
+        width:33.3333%;
+      }
+
+      .reminder-card{
+        min-height:150px;
+        border-radius:22px;
+        padding:1rem .55rem;
+      }
+
+      .reminder-icon-wrap{
+        width:54px;
+        height:54px;
+      }
+
+      .reminder-icon{
+        width:26px;
+        height:26px;
+      }
+
+      .reminder-label{
+        font-size:1.02rem;
+        line-height:1.18;
+      }
+
+      .faq-title{
+        font-size:2.2rem;
+        margin-top:1.55rem;
+        margin-bottom:1rem;
+      }
+
+      .fact-item h3{
+        font-size:1.38rem;
+      }
+
+      .fact-item p{
+        font-size:1rem;
+        line-height:1.72;
+        padding:0 .2rem;
+      }
+
+      .map-frame{
+        height:220px;
+      }
+
+      .rsvp-button{
+        min-width:190px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="fmlogo.png" alt="FM Logo" class="nav-logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#story">Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="#celebration">Celebration</a></li>
+          <li class="nav-item"><a class="nav-link" href="#attire">Wedding Attire</a></li>
+          <li class="nav-item"><a class="nav-link" href="#entourage">Entourage</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reminders">Reminders</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-wrap">
+        <div class="hero-panel">
+          <div class="hero-overline">Wedding Invitation</div>
+          <h1 class="hero-names">Faulo &amp; Marvie</h1>
+          <div class="hero-date">October 18, 2026 | Sunday</div>
+          <p class="hero-place">Nature’s Village Resort, Talisay Highway, Talisay City, Negros Occidental</p>
+
+          <div class="hero-actions">
+            <a href="#rsvp" class="hero-btn hero-btn-primary">RSVP Now</a>
+            <a href="#save-date" class="hero-btn hero-btn-secondary">See Details</a>
+          </div>
+
+          <div class="hero-verse">
+            <strong>He has made everything beautiful in its time.</strong>
+            <span>Ecclesiastes 3:11</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="save-date" class="save-the-date section-padding floral-corner">
+    <div class="container">
+      <div class="save-wrap">
+        <div class="save-icon-row">
+          <div class="save-icon-side">~</div>
+          <div class="save-icon-center">♡</div>
+          <div class="save-icon-side">~</div>
+        </div>
+
+        <div class="save-intro-line">You are invited to the wedding of</div>
+        <div class="save-intro-names">Faulo &amp; Marvie</div>
+
+        <div class="save-label">Save the Date</div>
+        <div class="save-date-line">October 18, 2026 | Sunday</div>
+        <div class="save-location">Nature’s Village Resort, Talisay Highway, Talisay City, Negros Occidental</div>
+
+        <div class="countdown-wrap">
+          <div class="countdown">
+            <div>
+              <div class="count-number" id="days">00</div>
+              <div class="count-label">Days</div>
+            </div>
+            <div>
+              <div class="count-number" id="hours">00</div>
+              <div class="count-label">Hours</div>
+            </div>
+            <div>
+              <div class="count-number" id="minutes">00</div>
+              <div class="count-label">Mins</div>
+            </div>
+            <div>
+              <div class="count-number" id="seconds">00</div>
+              <div class="count-label">Secs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="section-padding floral-corner">
+    <div class="container">
+      <h2 class="section-title mb-5">Our Story</h2>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6">
+          <div id="storyCarousel" class="carousel slide carousel-fade story-img-wrap" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active h-100">
+                <img src="4.jpg" alt="Our Story 1" class="story-img">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="3.jpg" alt="Our Story 2" class="story-img">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="2.jpg" alt="Our Story 3" class="story-img">
+              </div>
+            </div>
+
+            <button class="carousel-control-prev story-carousel-btn" type="button" data-bs-target="#storyCarousel" data-bs-slide="prev" aria-label="Previous story image">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next story-carousel-btn" type="button" data-bs-target="#storyCarousel" data-bs-slide="next" aria-label="Next story image">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="story-card soft-card floral-corner">
+            <div class="story-card-inner">
+              <div class="story-step">
+                <p>It all started with chit chat — one ordinary day that turned extraordinary.</p>
+              </div>
+              <div class="story-step">
+                <p>What began as casual conversations turned into deep midnight talks and shared dreams that made our hearts feel at home.</p>
+              </div>
+              <div class="story-step">
+                <p>This moment proves that distance means nothing when love is real.</p>
+              </div>
+              <div class="story-step">
+                <p>Long distance is finally over.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="celebration" class="section-padding floral-corner">
+    <div class="container">
+      <h2 class="section-title">The Celebration</h2>
+      <p class="section-subtitle">One venue, one shared location, and a smooth transition from ceremony to reception.</p>
+
+      <div class="soft-card celebration-card">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5">
+            <div class="celebration-visual">
+              <img src="3.jpg" alt="Celebration venue">
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="celebration-content">
+              <div class="eyebrow">Wedding Day Details</div>
+              <h3 class="detail-title">Garden Ceremony • Indoor Reception</h3>
+              <div class="detail-meta">Nature’s Village Resort • Talisay City, Negros Occidental</div>
+              <p>The ceremony will be held in the garden, followed by an indoor reception in the same venue. Guests may stay in one location throughout the celebration.</p>
+
+              <div class="row g-3 mt-1 mb-4">
+                <div class="col-sm-6 col-lg-3">
+                  <div class="mini-card">
+                    <h4>Guest Arrival</h4>
+                    <p>2:00 PM</p>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <div class="mini-card">
+                    <h4>Ceremony</h4>
+                    <p>Garden · 3:00 PM</p>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <div class="mini-card">
+                    <h4>Glazing Table</h4>
+                    <p>5:00 PM</p>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                  <div class="mini-card">
+                    <h4>Reception</h4>
+                    <p>Indoor · 6:00 PM</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="eyebrow">Venue Map</div>
+              <h3 class="detail-title">Shared Venue Location</h3>
+              <p>Both parts of the event will happen in the same place, so only one location is needed for guests.</p>
+
+              <iframe
+                class="map-frame"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Nature%27s%20Village%20Resort%20Talisay%20Negros%20Occidental&output=embed">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="attire" class="section-padding floral-corner">
+    <div class="container">
+      <h2 class="section-title">Wedding Attire</h2>
+      <p class="section-subtitle">A soft, polished palette of blush pink, butter yellow, and refined neutrals.</p>
+
+      <div class="soft-card guide-card floral-corner">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5">
+            <p class="guide-copy">
+              Formal or semi-formal attire is warmly requested. We would truly appreciate our guests wearing polished pieces in soft and muted tones for a graceful and cohesive look.
+            </p>
+            <p class="guide-copy mb-0">
+              Shades from blush, butter yellow, champagne, beige, taupe, and brown are welcome.
+            </p>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="palette-strip">
+              <div class="swatches">
+                <div class="swatch" style="background:#f5e6ab"></div>
+                <div class="swatch" style="background:#f3d8df"></div>
+                <div class="swatch" style="background:#eadfd6"></div>
+                <div class="swatch" style="background:#d7c4b6"></div>
+                <div class="swatch" style="background:#a37c57"></div>
+              </div>
+              <p class="palette-caption">A soft floral palette with blush, butter yellow, and refined neutrals.</p>
+            </div>
+
+            <div class="guide-no-row">
+              <div class="swatch x-mark" style="background:#7f145d"></div>
+              <div class="swatch x-mark" style="background:#6431a9"></div>
+              <div class="swatch x-mark" style="background:#93c400"></div>
+              <div class="swatch x-mark" style="background:#ffd800"></div>
+              <div class="swatch x-mark" style="background:#1fa4f2"></div>
+              <div class="swatch x-mark" style="background:#ff0000"></div>
+            </div>
+
+            <p class="guide-note-small mt-3">Please avoid bright, neon, or highly saturated colors to keep the theme consistent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="entourage" class="section-padding floral-corner">
+    <div class="container">
+      <h2 class="section-title">The Entourage</h2>
+      <p class="section-kicker">Our dearest family and friends who stand with us on this special day.</p>
+
+      <div class="soft-card entourage-block pink floral-corner">
+        <div class="row g-4 entourage-mobile-2">
+          <div class="col-6 col-md-6">
+            <h4 class="entourage-group-title">Groom’s Parents</h4>
+            <ul class="name-list">
+              <li>Mr. Fausto Ramos</li>
+              <li>Mrs. Lota Ramos</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-6">
+            <h4 class="entourage-group-title">Bride’s Parents</h4>
+            <ul class="name-list">
+              <li>Mr. Roberto Jaravelo</li>
+              <li>Mrs. Marilyn Jaravelo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-card entourage-block butter floral-corner">
+        <div class="entourage-card-header">Our Life Godparents</div>
+        <div class="entourage-subtext">To stand as principal witnesses in our exchange of vows...</div>
+        <div class="row g-4 entourage-mobile-2">
+          <div class="col-6 col-md-6">
+            <ul class="name-list">
+              <li>Pastor Roberto Fajarda</li>
+              <li>Mr. Aguinaldo Cacatian</li>
+              <li>Mr. Joselito Espino</li>
+              <li>Mr. Zaldy Diaz</li>
+              <li>Mrs. Paula Magtibay</li>
+              <li>Mrs. Ma. Luz Maca</li>
+              <li>Mr. Richard Ruel</li>
+              <li>Mr. Rodolfo Ocampo</li>
+              <li>Mr. Marjevic Ciocon</li>
+              <li>Mr. Jose Ipo Jr.</li>
+              <li>Mr. Rolando Batusbatusan</li>
+              <li>Pastor George Cadelina</li>
+              <li>Mrs. Yvonne Talabucon</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-6">
+            <ul class="name-list">
+              <li>Mrs. Marife Fajarda</li>
+              <li>Luzviminda Cacatain</li>
+              <li>Mrs. Loditha Espino</li>
+              <li>Mrs. Jennifer Diaz</li>
+              <li>Mrs. Maria Victoria Ola</li>
+              <li>Mrs. Myra Cacayan</li>
+              <li>Mrs. Miriam Ruel</li>
+              <li>Mrs. Grace Ocampo</li>
+              <li>Mrs. Evelyn Serisola</li>
+              <li>Ms. Carmen Ipo</li>
+              <li>Mrs. Monina Batusbatusan</li>
+              <li>Mrs. Loreto Cadelina</li>
+              <li>Mrs. Salvacion Santua</li>
+              <li>Florentina Chen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-card entourage-block pink floral-corner">
+        <div class="entourage-card-header">Our Secondary Sponsors</div>
+        <div class="entourage-subtext">To assist us in our needs...</div>
+        <div class="row g-4 entourage-mobile-2">
+          <div class="col-6 col-md-6">
+            <h4 class="entourage-group-title">Best Man</h4>
+            <ul class="name-list">
+              <li>Mr. Orlan Sison</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-6">
+            <h4 class="entourage-group-title">Maid of Honor</h4>
+            <ul class="name-list">
+              <li>Ms. Christine Charito</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-card entourage-block butter floral-corner">
+        <div class="entourage-card-header">Our Secondary Sponsors</div>
+        <div class="entourage-subtext">To guide us on our way...</div>
+
+        <div class="row g-4 mb-4 entourage-mobile-2">
+          <div class="col-6 col-md-6">
+            <h4 class="entourage-group-title">Groomsmen</h4>
+            <ul class="name-list">
+              <li>Mr. Dominic Dawat</li>
+              <li>Mr. Judyson M. Ramos</li>
+              <li>Mr. Lemuel Fajarda</li>
+              <li>Mr. Joemar M. Ramos</li>
+              <li>Mr. Edwin R. Vencilao Jr.</li>
+              <li>Mr. Levi Carlo Espino</li>
+              <li>Mr. Roberto Jaravelo</li>
+              <li>Mr. Miko Vladimir Ciocon</li>
+              <li>Mr. Archie Cacatian</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-6">
+            <h4 class="entourage-group-title">Bridesmaids</h4>
+            <ul class="name-list">
+              <li>Ms. Ana Luna Cacatian</li>
+              <li>Ms. Rosemarie Jaravelo</li>
+              <li>Ms. Angela Cacatian</li>
+              <li>Ms. Lorraine Ramos</li>
+              <li>Ms. Christine Alojado</li>
+              <li>Ms. Sarah Guillan Serisola</li>
+              <li>Ms. Charlotte Ramos</li>
+              <li>Ms. Faula Jane M. Ramos</li>
+              <li>Ms. Leonila Dela Cruz</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-4 entourage-mobile-2">
+          <div class="col-6 col-md-6">
+            <h4 class="entourage-group-title">Candle</h4>
+            <ul class="name-list">
+              <li>Mr. Mark Jaravelo</li>
+              <li>Mrs. Lorelie Jaravelo</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-6">
+            <h4 class="entourage-group-title">Veil</h4>
+            <ul class="name-list">
+              <li>Mr. Nikki Mopada</li>
+              <li>Mrs. Roselyn Mopada</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4 class="entourage-group-title">Cord</h4>
+            <ul class="name-list">
+              <li>Mr. Jerald Ramos</li>
+              <li>Mrs. Maricel Ramos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-card entourage-block pink floral-corner">
+        <div class="entourage-card-header">Our Symbol Bearers</div>
+        <div class="entourage-subtext">To carry our symbol of Love, Treasure, and Faith</div>
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-6">
+            <h4 class="entourage-group-title">Bible Bearer</h4>
+            <ul class="name-list">
+              <li>Feyne Sunday Jireh Ramos</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <h4 class="entourage-group-title">Ring Bearer</h4>
+            <ul class="name-list">
+              <li>Marco Skyler Jaravelo</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="entourage-group-title">Coin Bearer</h4>
+            <ul class="name-list">
+              <li>Louel Dela Cruz</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-card entourage-block butter floral-corner">
+        <div class="entourage-card-header">Our Flower Girls</div>
+        <div class="entourage-subtext">To shower us with love blooms</div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <ul class="name-list">
+              <li>Rishna Alexandria Mopada</li>
+              <li>Francine Sophia Judah Ramos</li>
+              <li>Loreen Hope Fajarda</li>
+              <li>Jiana Jean Espada</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section-padding floral-corner">
+    <div class="container">
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-subtitle">Click any photo for a closer look.</p>
+
+      <div class="row g-4">
+        <div class="col-6 col-md-4">
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="2.jpg" alt="Gallery 1">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="3.jpg" alt="Gallery 2">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="4.jpg" alt="Gallery 3">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="5.jpg" alt="Gallery 4">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="6.jpg" alt="Gallery 5">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="7.jpg" alt="Gallery 6">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reminders" class="section-padding floral-corner">
+    <div class="container">
+      <h2 class="section-title">Gentle Reminders</h2>
+
+      <div class="row g-3 g-md-4 faq-top-grid">
+        <div class="col-4">
+          <div class="reminder-card">
+            <div class="reminder-card-inner">
+              <div class="reminder-icon-wrap">
+                <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="13" r="8"></circle>
+                  <path d="M12 9v4l3 2"></path>
+                  <path d="M7 3 4.5 5.5"></path>
+                  <path d="M17 3l2.5 2.5"></path>
+                </svg>
+              </div>
+              <h4 class="reminder-label">Be On Time</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="reminder-card">
+            <div class="reminder-card-inner">
+              <div class="reminder-icon-wrap">
+                <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 14c2-1 3.5-3.5 4-6 2 1 3 2.5 3.5 4.5"></path>
+                  <path d="M13 8c1 1 2 2 2.5 3.5 1-.5 2-.5 3.5 0"></path>
+                  <path d="M6 18c2.5-1.5 4.5-2 6-2s3.5.5 6 2"></path>
+                  <path d="M9.5 12.5 8 14"></path>
+                  <path d="M14.5 11.5 16 13"></path>
+                  <path d="M12 5V3"></path>
+                </svg>
+              </div>
+              <h4 class="reminder-label">Finish the Event</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="reminder-card">
+            <div class="reminder-card-inner">
+              <div class="reminder-icon-wrap">
+                <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 20s-6.5-4.2-8.5-8A4.9 4.9 0 0 1 8 5.5c1.7 0 3 1 4 2.2 1-1.2 2.3-2.2 4-2.2a4.9 4.9 0 0 1 4.5 6.5C18.5 15.8 12 20 12 20z"></path>
+                </svg>
+              </div>
+              <h4 class="reminder-label">Have Fun</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="faq-title">FAQ's</h3>
+
+      <div class="facts-list">
+        <div class="fact-item">
+          <h3>Plus One</h3>
+          <p>Due to limited space, we are only able to accommodate those guests formally invited on our wedding invitation. We want to be surrounded by our families, friends, familiar faces, meaning we can only take those who are invited. Please refer to the number of seats allotted for you. Thank you for your understanding.</p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Kids</h3>
+          <p>We love children, but we cannot accommodate them at the venue. This is an adults-only affair. The only kids attending are those who are part of the entourage and those only requested. We hope you understand.</p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Parking</h3>
+          <p>Parking space is available in the vicinity. It is inside our venue. Kindly seek assistance from traffic enforcement personnel for guidance.</p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Arrival Timing</h3>
+          <p>The ceremony begins promptly at 3:00 PM, with the entourage walk starting at 2:30 PM. Please plan to arrive at 2:00 PM to allow ample time for parking and finding your seat.</p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Leave Time</h3>
+          <p>Please do not eat and run. It took us months to plan our wedding. Stay with us until the end of the program. If you must leave early, please personally come to thank us and bid goodbye before you go, perhaps not until our same day edit video is played.</p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Photo/Video</h3>
+          <p>We want photos and videos captured from our day, especially from our friends’ and families’ point of view. Meanwhile, during the ceremony, we kindly ask that you refrain from taking photos and videos as we want to savor the solemnity of the moment and honor God as we receive His blessing.</p>
+        </div>
+
+        <div class="fact-item">
+          <h3>RSVP</h3>
+          <p>Unfortunately, if we do not receive your RSVP by the specified date, you will not be able to attend. If you were to show up without submitting an RSVP, there would be no seat for you. If you need to update your RSVP, simply send us a message.</p>
+        </div>
+
+        <div class="fact-item">
+          <h3>Pets</h3>
+          <p>Even if we love pets so much, we are sorry to inform you that the ceremony venue does not allow any pets in the area, and we also want to keep the same vibe and solemnity during the reception, so we are hoping for your understanding about this.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="section-padding floral-corner">
+    <div class="container">
+      <div class="soft-card rsvp-panel">
+        <h2 class="rsvp-heading">We hope to see you from the altar.</h2>
+        <p class="rsvp-copy">We would be delighted to celebrate with you. Kindly respond through our RSVP form.</p>
+        <div class="rsvp-cheers">Cheers!</div>
+        <div class="rsvp-button-wrap">
+          <a href="https://forms.google.com" target="_blank" class="rsvp-button">RSVP now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p class="mb-1">With love, Faulo &amp; Marvie</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <img id="modalImage" src="" alt="Zoomed image" class="modal-image">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const targetDate = new Date('2026-10-18T00:00:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        document.getElementById('days').textContent = '00';
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    function openImage(el) {
+      const img = el.querySelector('img');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = img.src;
+      modalImage.alt = img.alt;
+      const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+      modal.show();
+    }
+  </script>
+</body>
+</html>
