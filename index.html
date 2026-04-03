@@ -57,6 +57,316 @@
       line-height: 1.85;
     }
 
+<<<<<<< HEAD
+    .nowrap-title {
+      white-space: nowrap;
+    }
+
+
+    .map-qr-wrap {
+  margin-top: 1rem;
+}
+
+.map-qr-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.map-qr {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.map-qr-note {
+  margin-top: 0.85rem;
+  font-size: 0.98rem;
+  color: var(--muted);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+@media (max-width: 767.98px) {
+  .map-qr {
+    width: 180px;
+    padding: 8px;
+    border-radius: 14px;
+  }
+}
+ .wedding-timeline-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+  column-gap: 18px;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(155, 95, 116, 0),
+    rgba(155, 95, 116, 0.16),
+    rgba(155, 95, 116, 0)
+  );
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+.timeline-time {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  line-height: 1.1;
+  color: #6f4b35;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.timeline-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #ab746d;
+  text-align: left;
+  white-space: nowrap;
+}
+
+@media (max-width: 767.98px) {
+  .wedding-timeline-list {
+    max-width: 100%;
+  }
+
+  .timeline-item {
+    grid-template-columns: 90px minmax(0, 1fr);
+    column-gap: 12px;
+    align-items: start;
+    padding: 0 0 8px;
+    margin-bottom: 8px;
+  }
+
+  .timeline-time {
+    font-size: 1.55rem;
+    text-align: left;
+    font-weight: 700;
+
+  }
+
+  .timeline-title {
+    font-size: 1.52rem;
+    text-align: left;
+    white-space: normal;
+    line-height: 1.15;
+    font-weight: 700;
+  }
+}
+
+    /* typing animation */
+    .type-line {
+      min-height: 1.8em;
+      white-space: normal;
+      position: relative;
+    }
+
+    .type-line.typing::after,
+    .type-line.done::after {
+      content: '|';
+      display: inline-block;
+      margin-left: 2px;
+      color: #9a6a45;
+      animation: blinkCursor 0.9s ease-in-out infinite;
+    }
+
+    .type-line.done::after {
+      opacity: 0;
+      animation: none;
+    }
+
+    @keyframes blinkCursor {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    /* hero */
+    .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 88px;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
+      url('1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-left-layout {
+    min-height: calc(100vh - 88px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0 2.3rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-top-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1.2rem;
+  }
+
+  .hero-bottom-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .hero-logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-logo {
+    width: min(250px, 78vw);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter:
+      drop-shadow(0 3px 10px rgba(0, 0, 0, 0.28))
+      drop-shadow(0 8px 24px rgba(0, 0, 0, 0.18));
+  }
+
+  .hero-rsvp-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    padding: 0.72rem 1.5rem;
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.92);
+    border-radius: 999px;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .hero-rsvp-box:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 1);
+    transform: translateY(-1px);
+  }
+
+  .hero-verse-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.22rem;
+  }
+
+  .hero-verse-box {
+    background: transparent;
+    color: #ffffff;
+    padding: 0;
+    box-shadow: none;
+    border: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.32rem;
+    line-height: 1.35;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.32);
+  }
+
+  .hero-verse-ref {
+    font-size: 1.32rem;
+    opacity: 0.96;
+  }
+
+  @media (max-width: 767.98px) {
+      .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.9rem 1rem;
+      }
+
+      .timeline-time {
+        text-align: left;
+      }
+    .hero {
+      min-height: 100svh;
+      background-position: center center !important;
+    }
+
+    .hero-left-layout {
+      min-height: calc(100svh - 88px);
+      padding: 1.5rem 0 1.8rem;
+    }
+
+    .hero-top-wrap {
+      padding-top: 1.8rem;
+    }
+
+    .hero-logo {
+      width: min(200px, 82vw);
+    }
+
+    .hero-rsvp-box {
+      min-width: 168px;
+      padding: 0.68rem 1.2rem;
+      font-size: 0.84rem;
+    }
+
+    .hero-verse-box {
+      font-size: 1.31rem;
+      max-width: 90%;
+    }
+
+    .hero-verse-ref {
+      font-size: 1.31rem;
+    }
+  }
+=======
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
     /* //story */
     #story{
       background: #f4e5b6;
@@ -84,8 +394,13 @@
 
 .save-intro-line {
   font-family: 'Cormorant Garamond', serif;
+<<<<<<< HEAD
+  font-size: clamp(1.2rem, 2vw, 1.85rem);
+  font-weight: 700;
+=======
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 500;
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #b88b78;
@@ -94,11 +409,22 @@
 
 .save-intro-names {
   font-family: 'Cormorant Garamond', serif;
+<<<<<<< HEAD
+  font-size: clamp(3.3rem, 10vw, 4.4rem);
+  font-weight: 600;
+  color: #9a6a45;
+  line-height: 1.20;
+=======
   font-size: clamp(2.6rem, 6vw, 4.8rem);
   font-weight: 600;
   color: #9a6a45;
   line-height: 1;
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
   margin-bottom: 0.3rem;
+}
+
+.save-intro-names br {
+  display: block;
 }
 
 .save-label {
@@ -110,7 +436,7 @@
 }
 
 .save-date-line {
-  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-size: clamp(1.7rem, 3.2vw, 1.8rem);
   font-weight: 500;
   margin-bottom: 0.18rem;
   line-height: 1.1;
@@ -143,9 +469,20 @@
     }
 
     .navbar {
+<<<<<<< HEAD
+      background: #f2d6d4;
+=======
       background: rgba(255, 255, 255, 0.92);
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(155, 95, 116, 0.10);
+      /* padding-top: 14px;
+      padding-bottom: 14px; */
+    }
+
+    .nav-logo {
+      height: 80px;
+      width: auto;
     }
 
     .navbar-brand {
@@ -167,6 +504,9 @@
       color: var(--accent) !important;
     }
 
+<<<<<<< HEAD
+      
+=======
     .hero {
       min-height: 100vh;
       display: flex;
@@ -297,6 +637,7 @@
       font-size: 0.86rem;
     }
 
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
     .section-padding {
       padding: 86px 0;
       position: relative;
@@ -304,19 +645,34 @@
 
     .section-title {
       color: #9a6a45;
+<<<<<<< HEAD
+      font-size: clamp(3.2rem, 4vw, 3.35rem);
+      font-weight: 1000;
+=======
       font-size: clamp(2.1rem, 4vw, 3.35rem);
       font-weight: 500;
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
       text-align: center;
       margin-bottom: 0.55rem;
       letter-spacing: 0.01em;
     }
 
     .section-kicker {
+<<<<<<< HEAD
+      /* color: #b88b78; */
+      color: #a98575;
+=======
       color: #b88b78;
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
       text-align: center;
-      color: var(--accent);
+      /* color: var(--accent); */
       font-family: 'Cormorant Garamond', serif;
+<<<<<<< HEAD
+      /* font-size: clamp(1.1rem, 2vw, 1.45rem); */
+      font-size: 1.35rem;
+=======
       font-size: clamp(1.1rem, 2vw, 1.45rem);
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
       margin-bottom: 1.6rem;
       font-weight: 400;
     }
@@ -324,11 +680,15 @@
     .section-subtitle {
       color: #a98575;
       text-align: center;
-      max-width: 820px;
+      max-width: 900px;
       margin: 0 auto 2rem;
       color: var(--muted);
       font-weight: 400;
+<<<<<<< HEAD
+      font-size: 1.35rem;
+=======
       font-size: 1.05rem;
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
     }
 
     .soft-card {
@@ -344,6 +704,10 @@
     .save-the-date {
       /* background: linear-gradient(180deg, #fffdf9 0%, #fff8f0 60%, #fcf8f4 100%); */
       background-color: white;
+<<<<<<< HEAD
+
+=======
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
     }
 
     .save-wrap {
@@ -377,20 +741,34 @@
     .save-label {
       letter-spacing: 0.16em;
       text-transform: uppercase;
+<<<<<<< HEAD
+      font-size: 2vw;
+      font-weight: 500;
+=======
       font-size: 0.82rem;
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
       color: #b88b78;
       margin-bottom: 0.2rem;
     }
 
     .save-date-line {
+<<<<<<< HEAD
+      font-size: clamp(1.7rem, 3vw, 3.8rem);
+=======
       font-size: clamp(2.2rem, 5vw, 3.8rem);
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
       font-weight: 500;
       margin-bottom: 0.25rem;
       color: #9a6a45;
     }
 
     .save-location {
+<<<<<<< HEAD
+      font-size: clamp(1.25rem, 2vw, 1.45rem);
+      font-weight: 400;
+=======
       font-size: clamp(1.05rem, 2vw, 1.45rem);
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
       color: #b7897c;
       margin-bottom: 1.8rem;
       font-family: 'Cormorant Garamond', serif;
@@ -425,8 +803,14 @@
     .count-label {
       text-transform: uppercase;
       letter-spacing: 0.11em;
+<<<<<<< HEAD
+      /* color: #b88b78; */
+      color: black;
+=======
       color: #b88b78;
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
       font-size: 0.8rem;
+      font-weight: 1000;
       margin-top: 0.3rem;
     }
 
@@ -500,7 +884,8 @@
 }
 
 .story-step p {
-  font-size: 1.18rem;
+  font-size: 1.28rem;
+  font-weight: 500;
   line-height: 1.85;
   margin: 0;
   color: var(--ink);
@@ -573,6 +958,13 @@
     height: 2rem;
     background-size: 52% 52%;
   }
+     .save-label {
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      color: #b88b78;
+      margin-bottom: 0.2rem;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -581,11 +973,11 @@
   }
 
   .story-card-inner {
-    padding: 1.2rem 1rem;
+    padding: 1.3rem 1.5rem;
   }
 
   .story-step p {
-    font-size: 0.92rem;
+    font-size: 1.32rem;
     line-height: 1.65;
   }
 }
@@ -606,13 +998,14 @@
 
     .detail-title {
       font-size: 1.8rem;
-      font-weight: 500;
+      font-weight: 1000;
       margin-bottom: 0.35rem;
     }
 
     .detail-meta {
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: 1.04rem;
+      font-weight: 500;
       letter-spacing: 0.03em;
       margin-bottom: 0.85rem;
     }
@@ -627,7 +1020,7 @@
       padding-right: 100px;
     }
 
-    .celebration-visual {
+   .celebration-visual {
       border-radius: 20px;
       overflow: hidden;
       height: 100%;
@@ -639,9 +1032,9 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center center;
       display: block;
     }
-
     .mini-card {
       border: 1px solid rgba(155, 95, 116, 0.14);
       /* background: linear-gradient(180deg, rgba(255,247,236,0.82), rgba(255,255,255,0.72)); */
@@ -715,7 +1108,7 @@
 
 .guide-copy {
   color: var(--ink);
-  font-size: 0.98rem;
+  font-size: 1.35rem;
   line-height: 1.75;
   margin-bottom: 1.35rem;
 }
@@ -731,8 +1124,10 @@
 .palette-strip {
   background: rgba(255,255,255,0.72);
   border: 1px solid rgba(42,36,31,0.10);
-  padding: 1rem 1rem 0.9rem;
+  padding: .5rem .5rem 1.9rem;
+  padding-top: 2rem;
   margin-bottom: 1rem;
+  border-radius: 10px;
 }
 
 .swatches {
@@ -753,7 +1148,8 @@
 }
 
 .palette-caption {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 500;
   line-height: 1.5;
   color: var(--muted);
   text-align: center;
@@ -764,12 +1160,12 @@
   display: flex;
   justify-content: center;
   gap: 0.7rem;
-  margin-top: 0.2rem;
+  margin-top: 2.2rem;
   flex-wrap: wrap;
 }
 
 .guide-note-small {
-  font-size: 0.86rem;
+  font-size: 1.3rem;
   color: var(--muted);
   text-align: center;
   margin-top: 0.9rem;
@@ -858,7 +1254,8 @@
 
   .guide-copy {
     text-align: center;
-    font-size: 0.94rem;
+    font-size: 1.32rem;
+
   }
 
   .swatch {
@@ -961,22 +1358,62 @@
       font-style: italic;
     }
 
-    .name-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: center;
-    }
+    /* applies to all entourage name lists */
+.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
 
-    .name-list li {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1rem, 1.8vw, 1.25rem);
-      font-weight: 500;
-      margin-bottom: 0.08rem;
-      color: var(--ink);
-      line-height: 1.45;
-    }
+.name-list li {
+  position: relative;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 500;
+  margin: 0;
+  padding: 0 0 0.55rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
 
+.name-list li:not(:last-child) {
+  margin-bottom: 0.55rem;
+}
+
+.name-list li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 78%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(155, 95, 116, 0),
+    rgba(155, 95, 116, 0.16),
+    rgba(155, 95, 116, 0)
+  );
+}
+
+/* mobile */
+@media (max-width: 767.98px) {
+  .name-list li {
+    font-size: .92rem !important;
+    font-weight: 700;
+    line-height: 1.3;
+    padding: 0 0 0.6rem;
+  }
+
+  .name-list li:not(:last-child) {
+    margin-bottom: 0.6rem;
+  }
+
+  .name-list li:not(:last-child)::after {
+    width: 82%;
+  }
+}
     .reminder-card {
       text-align: center;
       padding: 1.3rem 0.95rem;
@@ -1104,31 +1541,7 @@
     }
 
     @media (max-width: 767.98px) {
-      .hero {
-        min-height: 92vh;
-      }
-
-      .hero-left-layout {
-        min-height: calc(92vh - 88px);
-        padding: 1.5rem 0 1.8rem;
-      }
-
-      .hero-name-box {
-        font-size: 1.85rem;
-        padding: 0.18rem 0.75rem;
-      }
-
-      .hero-name-box-top {
-        transform: translateX(-18px) rotate(-2deg);
-      }
-
-      .hero-name-box-bottom {
-        transform: translateX(14px) rotate(-2deg);
-      }
-
-      .hero-verse-box {
-        font-size: 0.78rem;
-      }
+  
 
       .countdown {
         grid-template-columns: repeat(2, 1fr);
@@ -1183,13 +1596,21 @@
     }
 
     .navbar,
+<<<<<<< HEAD
+=======
     .hero-verse-box,
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
     .countdown-wrap,
     .soft-card,
     .rsvp-form .form-control,
     .rsvp-form .form-select,
     .rsvp-form textarea {
+<<<<<<< HEAD
+      /* background: rgba(255,255,255,0.94); */
+      background:#f2d6d4;
+=======
       background: rgba(255,255,255,0.94);
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
     }
 
     .save-the-date {
@@ -1219,8 +1640,11 @@
 
     .section-kicker,
     .save-label,
+<<<<<<< HEAD
+=======
     .count-label,
     .hero-verse-ref,
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
     .detail-meta,
     .attire-note,
     .gallery-note,
@@ -1250,7 +1674,10 @@
 
     .btn,
     button,
+<<<<<<< HEAD
+=======
     .hero-rsvp-box,
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
     .submit-btn,
     .btn-primary {
       font-family: 'Cormorant Garamond', serif;
@@ -1259,11 +1686,15 @@
       letter-spacing: 0.06em;
     }
 
+<<<<<<< HEAD
+
+=======
     .hero-rsvp-box {
       background: #e6b8b6 !important;
       color: #fff !important;
       border-color: rgba(230, 184, 182, 0.92) !important;
     }
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
 
     .submit-btn,
     .btn-primary {
@@ -1272,7 +1703,10 @@
       border-color: rgba(185, 131, 53, 0.85) !important;
     }
 
+<<<<<<< HEAD
+=======
     .hero-rsvp-box:hover,
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
     .submit-btn:hover,
     .btn-primary:hover {
       filter: brightness(0.98);
@@ -1425,6 +1859,9 @@
 
     /* Mobile landing image should fit again */
     @media (max-width: 768px) {
+<<<<<<< HEAD
+     
+=======
       .hero,
       .hero-section,
       .landing-section,
@@ -1467,6 +1904,7 @@
         font-size: 2.15rem !important;
         line-height: 1.02 !important;
       }
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
 
       /* FAQ spacing on mobile */
       .faq-title {
@@ -1485,7 +1923,12 @@
       .story-text-card,
       .story-copy-card {
         margin-bottom: 0 !important;
+<<<<<<< HEAD
+        padding-top: 1.95rem !important;
+        padding-bottom: 1.95rem !important;
+=======
         padding-bottom: 0.75rem !important;
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
       }
 
       /* Story card blush pink */
@@ -1747,64 +2190,79 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#home">Faulo &amp; Marvie</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#story">Story</a></li>
-          <li class="nav-item"><a class="nav-link" href="#celebration">Celebration</a></li>
-          <li class="nav-item"><a class="nav-link" href="#attire">Wedding Attire</a></li>
-          <li class="nav-item"><a class="nav-link" href="#entourage">Entourage</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#reminders">Reminders</a></li>
-          <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
-        </ul>
+ <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <img src="fmlogo.png" alt="FM Logo" class="nav-logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#story">Story</a></li>
+        <li class="nav-item"><a class="nav-link" href="#celebration">Celebration</a></li>
+        <li class="nav-item"><a class="nav-link" href="#attire">Wedding Attire</a></li>
+        <li class="nav-item"><a class="nav-link" href="#entourage">Entourage</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reminders">Reminders</a></li>
+        <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="hero floral-corner">
+  <div class="container hero-left-layout">
+    <div class="hero-top-wrap">
+      <div class="hero-logo-wrap">
+        <img src="fmlogolanding.png" alt="Faulo and Marvie logo" class="hero-logo">
       </div>
     </div>
-  </nav>
 
-  <section id="home" class="hero floral-corner">
-    <div class="container hero-left-layout">
-      <div class="hero-top-wrap">
-        <div class="hero-name-stack">
-          <div class="hero-name-box hero-name-box-top">Faulo &amp;</div>
-          <div class="hero-name-box hero-name-box-bottom">Marvie</div>
-        </div>
-      </div>
+    <div class="hero-bottom-wrap">
+      <a href="#rsvp" class="btn hero-rsvp-box">RSVP now</a>
 
+<<<<<<< HEAD
+      <div class="hero-verse-wrap">
+        <div class="hero-verse-box"><strong>He has made everything beautiful in its time.</strong></div>
+        <div class="hero-verse-box hero-verse-ref"><strong>Ecclesiastes 3:11</strong></div>
+=======
       <div class="hero-bottom-wrap">
         <a href="#rsvp" class="btn hero-rsvp-box">RSVP now</a>
         <div class="hero-verse-wrap">
           <div class="hero-verse-box"><strong>He has made everything beautiful in its time.</strong></div>
           <div class="hero-verse-box hero-verse-ref"><strong>Ecclesiastes 3:11</strong></div>
         </div>
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <section id="save-date" class="save-the-date section-padding floral-corner">
   <div class="container">
     <div class="save-wrap">
-       <div class="save-icon-row">
+      <div class="save-icon-row">
         <div class="save-icon-side">~</div>
         <div class="save-icon-center">♡</div>
         <div class="save-icon-side">~</div>
       </div>
+
       <div class="save-intro">
-        <div class="save-intro-line">You are invited to the wedding of</div>
-        <div class="save-intro-names">Faulo &amp; Marvie</div>
+        <div class="save-intro-line"><strong></strong>You are invited to the wedding of<strong></strong></div>
+        <div class="save-intro-names">
+        <strong class="save-name-top">Faulo &amp;</strong><br>
+        <strong class="save-name-bottom">Marvie</strong>
       </div>
-
-
+      </div>
 
       <div class="save-label">Save the Date</div>
       <div class="save-date-line display-font">October 18, 2026 | Sunday</div>
-      <div class="save-location">Nature’s Village Resort, Talisay Highway, Talisay City, Negros Occidental</div>
+      <div class="save-location"><strong>Nature’s Village Resort, Talisay Highway, Talisay City, Negros Occidental</strong></div>
 
       <div class="countdown-wrap">
         <div class="countdown">
@@ -1826,12 +2284,14 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
 <section id="story" class="section-padding floral-corner">
   <div class="container">
     <h2 class="section-title mb-5">Our Story</h2>
@@ -1842,6 +2302,10 @@
         <div id="storyCarousel" class="carousel slide carousel-fade story-img-wrap" data-bs-ride="carousel" data-bs-interval="3500">
           <div class="carousel-inner h-100">
             <div class="carousel-item active h-100">
+<<<<<<< HEAD
+              <img src="carousel.jpg" alt="Our Story 1" class="story-img d-block w-100">
+            </div>
+=======
               <img src="4.jpg" alt="Our Story 1" class="story-img d-block w-100">
             </div>
             <div class="carousel-item h-100">
@@ -1851,13 +2315,16 @@
               <img src="2.jpg" alt="Our Story 3" class="story-img d-block w-100">
             </div>
           </div>
+>>>>>>> f029256510290d776b1d0175d317b19a4a9ca692
 
+          </div>
+<!-- 
           <button class="carousel-control-prev story-carousel-btn" type="button" data-bs-target="#storyCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
           </button>
           <button class="carousel-control-next story-carousel-btn" type="button" data-bs-target="#storyCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
-          </button>
+          </button> -->
         </div>
       </div>
 
@@ -1865,16 +2332,16 @@
         <div class="soft-card story-card h-100 floral-corner">
           <div class="story-card-inner">
             <div class="story-step">
-              <p class="mb-0">It all started with chit chat- one ordinary day that turned extraordinary.</p>
+              <p class="mb-0 type-line" data-text="It all started with chit chat- one ordinary day that turned extraordinary."></p>
             </div>
             <div class="story-step">
-              <p class="mb-0">What began as casual conversations turned into deep midnight talks and shared dreams that made our hearts feel at home.</p>
+              <p class="mb-0 type-line" data-text="What began as casual conversations turned into deep midnight talks and shared dreams that made our hearts feel at home."></p>
             </div>
             <div class="story-step">
-              <p class="mb-0">This moment prove that distance means nothing when love is real.</p>
+              <p class="mb-0 type-line" data-text="This moment prove that distance means nothing when love is real."></p>
             </div>
             <div class="story-step mb-0">
-              <p class="mb-0">Long distance is finally over.</p>
+              <p class="mb-0 type-line" data-text="Long distance is finally over."></p>
             </div>
           </div>
         </div>
@@ -1893,53 +2360,66 @@
         <div class="row g-4 align-items-stretch">
           <div class="col-lg-5">
             <div class="celebration-visual">
-              <img src="3.jpg" alt="Celebration venue">
+              <img src="celebration.jpg" alt="Celebration venue">
             </div>
           </div>
 
   <div class="col-lg-7">
   <div class="card-body p-80 h-100 celebration-content">
-    <div class="eyebrow">Wedding Day Details</div>
+    <!-- <div class="eyebrow">Wedding Day Details</div> -->
     <h3 class="detail-title">Garden Ceremony • Indoor Reception</h3>
     <div class="detail-meta">Nature’s Village Resort • Talisay City, Negros Occidental</div>
     <p>The ceremony will be held in the garden, followed by an indoor reception in the same venue. Guests may stay in one location throughout the celebration.</p>
 
-    <div class="row g-3 mt-1 mb-4">
-      <div class="col-sm-6 col-lg-3">
-        <div class="mini-card">
-          <h4>Guest Arrival</h4>
-          <p>2:00 PM</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="mini-card">
-          <h4>Ceremony</h4>
-          <p>Garden · 3:00 PM</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="mini-card">
-          <h4>Glazing Table</h4>
-          <p>5:00 PM</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3">
-        <div class="mini-card">
-          <h4>Reception</h4>
-          <p>Indoor · 6:00 PM</p>
-        </div>
-      </div>
+<div class="wedding-timeline-list mt-3 mb-4">
+  <div class="timeline-item">
+    <div class="timeline-time">2:00 PM</div>
+    <div class="timeline-title">Guest Arrival</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-time">2:30 PM</div>
+    <div class="timeline-title">Walking of the Entourage</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-time">3:00 PM</div>
+    <div class="timeline-title">Ceremony · Garden</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-time">5:00 PM</div>
+    <div class="timeline-title">Glazing Table</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-time">6:00 PM</div>
+    <div class="timeline-title">Reception · Indoor</div>
+  </div>
+</div>
+      <h3 class="detail-title">Shared Venue Location</h3>
+<p>Both parts of the event will happen in the same place, so only one location is needed for guests.</p>
+
+    <div class="map-qr-wrap text-center">
+      <a
+        href="https://www.google.com/maps?q=Nature%27s%20Village%20Resort%20Talisay%20Negros%20Occidental"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="map-qr-link"
+      >
+        <img
+          class="map-qr"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3DNature%2527s%2520Village%2520Resort%2520Talisay%2520Negros%2520Occidental"
+          alt="QR code for Google Maps location"
+        >
+      </a>
+
+      <p class="map-qr-note mb-0">
+        Scan to open the venue in Google Maps
+      </p>
     </div>
 
-    <div class="eyebrow">Venue Map</div>
-    <h3 class="detail-title">Shared Venue Location</h3>
-    <p>Both parts of the event will happen in the same place, so only one location is needed for guests.</p>
-    <iframe
-      class="map-frame"
-      loading="lazy"
-      allowfullscreen
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps?q=Nature%27s%20Village%20Resort%20Talisay%20Negros%20Occidental&output=embed"></iframe>
+
   </div>
 </div>
         </div>
@@ -2238,6 +2718,24 @@
             <div class="gallery-overlay">View Photo</div>
           </div>
         </div>
+                <div class="col-6 col-md-4">
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="7.jpg" alt="Gallery 6" class="gallery-img">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
+        </div>
+                <div class="col-6 col-md-4">
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="7.jpg" alt="Gallery 6" class="gallery-img">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
+        </div>
+                <div class="col-6 col-md-4">
+          <div class="gallery-item" onclick="openImage(this)">
+            <img src="7.jpg" alt="Gallery 6" class="gallery-img">
+            <div class="gallery-overlay">View Photo</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -2449,5 +2947,48 @@
       modal.show();
     }
   </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const lines = document.querySelectorAll('.type-line');
+    const typeSpeed = 75;     // bigger = slower
+    const linePause = 900;    // pause between lines
+
+    function typeLine(el, text, speed) {
+      return new Promise((resolve) => {
+        let i = 0;
+        el.textContent = '';
+        el.classList.add('typing');
+
+        function type() {
+          if (i < text.length) {
+            el.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          } else {
+            el.classList.remove('typing');
+            el.classList.add('done');
+            setTimeout(() => {
+              el.classList.remove('done');
+              resolve();
+            }, 250);
+          }
+        }
+
+        type();
+      });
+    }
+
+    async function playTyping() {
+      for (const line of lines) {
+        const text = line.getAttribute('data-text') || '';
+        await typeLine(line, text, typeSpeed);
+        await new Promise(resolve => setTimeout(resolve, linePause));
+      }
+    }
+
+    playTyping();
+  });
+</script>
 </body>
 </html>
