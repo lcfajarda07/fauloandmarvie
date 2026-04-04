@@ -88,6 +88,259 @@
   font-family: 'Cormorant Garamond', serif;
 }
 
+
+/* attire */
+.attire-guide-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(132, 102, 95, 0.10);
+}
+
+.role-palette-list {
+  display: grid;
+  gap: 10px;
+}
+
+.role-palette-item {
+  color: #8a6a61;
+  line-height: 1.7;
+}
+
+.palette-strip {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 18px;
+  padding: 18px 20px;
+}
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.swatch {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(120, 92, 86, 0.12);
+}
+
+.palette-caption {
+  margin: 0;
+  color: #8a6a61;
+  line-height: 1.7;
+}
+
+.floral-swatch,
+.floral-pink-swatch,
+.floral-yellow-swatch {
+  position: relative;
+  overflow: hidden;
+}
+
+.floral-swatch {
+  background:
+    radial-gradient(circle at 30% 30%, #f3c8d3 0 22%, transparent 23%),
+    radial-gradient(circle at 65% 35%, #f5e6a6 0 20%, transparent 21%),
+    radial-gradient(circle at 45% 65%, #e8bcc7 0 18%, transparent 19%),
+    radial-gradient(circle at 70% 70%, #f7d9b8 0 16%, transparent 17%),
+    #f6eee7;
+}
+
+.floral-pink-swatch {
+  background:
+    radial-gradient(circle at 30% 30%, #f1c8d4 0 22%, transparent 23%),
+    radial-gradient(circle at 68% 38%, #e7b8c7 0 18%, transparent 19%),
+    radial-gradient(circle at 45% 68%, #f6dce3 0 17%, transparent 18%),
+    #f7ecef;
+}
+
+.floral-yellow-swatch {
+  background:
+    radial-gradient(circle at 30% 30%, #f6e39a 0 22%, transparent 23%),
+    radial-gradient(circle at 68% 38%, #efd06e 0 18%, transparent 19%),
+    radial-gradient(circle at 45% 68%, #f8edbf 0 17%, transparent 18%),
+    #fbf4da;
+}
+
+
+.section-divider {
+  border: 0;
+  border-top: 1px solid rgba(138, 106, 97, 0.18);
+  margin: 48px auto;
+  max-width: 760px;
+}
+
+.section-title,
+.faq-title {
+  color: #8a6a61;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.gifts-text,
+.hashtag-text {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #8a6a61;
+  line-height: 1.8;
+  font-size: 1.35em;
+}
+
+.qr-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.qr-image {
+  width: 180px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(120, 92, 86, 0.12);
+}
+
+
+/* upload photos */
+.upload-photos-section {
+  padding-inline: 12px;
+}
+
+.upload-photos-text {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #8a6a61;
+  line-height: 1.8;
+  font-size: 1.35rem;
+}
+
+.upload-photos-qr-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.upload-photos-qr-image {
+  width: 180px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(120, 92, 86, 0.12);
+}
+
+@media (max-width: 767.98px) {
+  .upload-photos-text {
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .upload-photos-qr-image {
+    width: 150px;
+  }
+}
+
+/* reminder cards */
+.faq-top-grid .col-12 {
+  display: flex;
+}
+
+.reminder-card {
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease;
+}
+
+.reminder-card-inner {
+  height: 100%;
+  border-radius: 20px;
+  padding: 22px 18px;
+  background: rgba(255, 255, 255, 0.62);
+  transition: background 0.28s ease, box-shadow 0.28s ease;
+}
+
+.reminder-card:hover {
+  transform: translateY(-4px);
+}
+
+.reminder-card:hover .reminder-card-inner {
+  background: #f2d6d4;
+  box-shadow: 0 14px 28px rgba(138, 106, 97, 0.14);
+}
+
+.reminder-card:hover .reminder-label,
+.reminder-card:hover .reminder-icon {
+  color: #8a6a61;
+  stroke: #8a6a61;
+}
+
+/* hashtag html card */
+.hashtag-html-card {
+  margin: 24px auto 0;
+  max-width: 760px;
+  background: #f2d6d4;
+  border-radius: 24px;
+  padding: 28px 24px;
+  box-shadow: 0 10px 25px rgba(120, 92, 86, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hashtag-line {
+  color: #9a6a45;
+  font-size: clamp(1.8rem, 2vw, 3rem);
+  line-height: 1.15;
+  font-weight: 600;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  letter-spacing: 0.01em;
+}
+
+/* mobile */
+@media (max-width: 767.98px) {
+  .section-divider {
+    margin: 36px auto;
+  }
+
+  .faq-title {
+    font-size: 1.65rem;
+  }
+
+  .gifts-text,
+  .hashtag-text {
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .qr-image {
+    width: 150px;
+  }
+
+  .reminder-card-inner {
+    padding: 18px 16px;
+  }
+
+  .hashtag-html-card {
+    padding: 22px 16px;
+    border-radius: 18px;
+    gap: 12px;
+  }
+
+  .hashtag-line {
+    /* font-size: clamp(1.25rem, 7vw, 2rem); */
+    font-size: 1.25rem;
+  }
+}
+
 @media (max-width: 767.98px) {
   .map-qr {
     width: 180px;
@@ -364,6 +617,30 @@
       font-size: 1.31rem;
     }
   }
+
+
+  /* gifts */
+
+  .gifts-text {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #8a6a61;
+  line-height: 1.8;
+  font-size: 1.35rem;
+}
+
+.qr-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.qr-image {
+  width: 180px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(120, 92, 86, 0.12);
+}
+
     /* //story */
     #story{
       background: #f4e5b6;
@@ -432,6 +709,14 @@
   color: var(--accent);
   margin-bottom: 1.8rem;
   font-family: 'Cormorant Garamond', serif;
+}
+.floral-swatch {
+  background:
+    radial-gradient(circle at 30% 30%, #f3c8d3 0 22%, transparent 23%),
+    radial-gradient(circle at 65% 35%, #f5e6a6 0 20%, transparent 21%),
+    radial-gradient(circle at 45% 65%, #e8bcc7 0 18%, transparent 19%),
+    radial-gradient(circle at 70% 70%, #f7d9b8 0 16%, transparent 17%),
+    #f6eee7;
 }
 
     .floral-corner::before,
@@ -735,6 +1020,11 @@
 }
 
 @media (max-width: 767.98px) {
+
+    .gifts-text {
+      font-size: 1.08rem;
+    }
+
   .story-img-wrap {
     min-height: 260px;
     border-radius: 24px;
@@ -960,12 +1250,13 @@
 }
 
 .palette-caption {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.5;
   color: var(--muted);
-  text-align: center;
+  text-align: left;
   margin: 0;
+  margin-left: 20px;
 }
 
 .guide-no-row {
@@ -1164,9 +1455,9 @@
       text-align: center;
       color: var(--accent);
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin-bottom: 1.2rem;
-      font-weight: 400;
+      font-weight: 700;
       font-style: italic;
     }
 
@@ -1531,7 +1822,7 @@
       }
 
       .fact-item h3 {
-        font-size: 1.75rem;
+        font-size: 1.73rem;
         margin-bottom: 0.35rem;
       }
 
@@ -1721,7 +2012,7 @@
     }
 
     .fact-item h3 {
-      font-size: clamp(1.75rem, 3.2vw, 2.45rem) !important;
+      font-size: clamp(1.75rem, 1.35vw, 2.45rem) !important;
       line-height: 1.15 !important;
       margin-bottom: 0.55rem !important;
     }
@@ -1756,7 +2047,7 @@
     #reminders .section-title {
       text-align: center;
       color: #9a6a45;
-      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      font-size: clamp(3.2rem ,4vw, 3.35rem);
       line-height: 1.08;
       margin-bottom: 1.5rem;
     }
@@ -1958,7 +2249,7 @@
     </div>
 
     <div class="hero-bottom-wrap">
-      <a href="#rsvp" class="btn hero-rsvp-box">RSVP now</a>
+      <a href="https://forms.gle/gU8LxNL5WBnTeVfK9" target="_blank" class="btn hero-rsvp-box">RSVP now</a>
 
       <div class="hero-verse-wrap">
         <div class="hero-verse-box"><strong>He has made everything beautiful in its time.</strong></div>
@@ -2139,55 +2430,107 @@
 
 <section id="attire" class="section-padding floral-corner">
   <div class="container">
-    <h2 class="section-title">Wedding Attire</h2>
-    <p class="section-subtitle">A soft, polished palette of blush pink, butter yellow, and refined neutrals.</p>
+    <h2 class="section-title mb-5">Wedding Attire</h2>
 
-    <div class="soft-card guide-card floral-corner">
+
+    <!-- Entourage -->
+    <div class="soft-card guide-card floral-corner mb-5">
       <div class="row g-5 align-items-center">
         <div class="col-lg-5">
           <div class="guide-copy-wrap">
-            <!-- <div class="guide-script">Your Guide</div>
-            <h3 class="guide-heading">On Attire</h3> -->
-
+            <h3><strong>Entourage</strong></h3>
             <p class="guide-copy guide-copy-first">
-              Formal or semi-formal attire is warmly requested. We would truly appreciate our guests wearing polished pieces in soft and muted tones for a graceful and cohesive look.
+             We kindly ask everyone to follow their assigned color palette for a harmonious and elegant look.
             </p>
 
-            <p class="guide-copy mb-0">
-              Shades from blush, butter yellow, champagne, beige, taupe, and brown are welcome.
-            </p>
+            <!-- <div class="role-palette-list mt-4">
+              <div class="role-palette-item">
+                <strong>Ninang:</strong> Old Pink, Rose Quartz, Dusty Rose
+              </div>
+              <div class="role-palette-item">
+                <strong>Maid of Honor:</strong> Pastel Pink
+              </div>
+              <div class="role-palette-item">
+                <strong>Bridesmaid:</strong> Pastel Pink, Blush Pink, Pale Butter, Butter Yellow
+              </div>
+              <div class="role-palette-item">
+                <strong>Entourage:</strong> Floral Pink, Floral Yellow
+              </div>
+            </div> -->
+
+            <div class="palette-strip mt-4">
+              <div class="swatches">
+                <div class="swatch" style="background:#c88f9a" title="Old Pink"></div>
+                <div class="swatch" style="background:#e7d7d7" title="Rose Quartz"></div>
+                <div class="swatch" style="background:#c78f8f" title="Dusty Rose"></div>
+                <div class="swatch" style="background:#f4d7df" title="Pastel Pink"></div>
+                <div class="swatch" style="background:#e8bcc7" title="Blush Pink"></div>
+                <div class="swatch" style="background:#f8edbf" title="Pale Butter"></div>
+                <div class="swatch" style="background:#f5e6a6" title="Butter Yellow"></div>
+                <div class="swatch floral-pink-swatch" title="Floral Pink"></div>
+                <div class="swatch floral-yellow-swatch" title="Floral Yellow"></div>
+              </div>
+              <p class="palette-caption" style="text-align: left;">
+                Ninang: old pink, rose quartz, dusty rose. <br> Maid of Honor: pastel pink.<br> Bridesmaid: pastel pink, blush pink, pale butter, butter yellow. <br> Entourage: floral pink and floral yellow.
+              </p>
+            </div>
           </div>
         </div>
 
         <div class="col-lg-7">
           <div class="guide-visual-wrap">
-            <div class="palette-strip">
-              <div class="swatches">
-                <div class="swatch" style="background:#f5e6ab"></div>
-                <div class="swatch" style="background:#f3d8df"></div>
-                <div class="swatch" style="background:#eadfd6"></div>
-                <div class="swatch" style="background:#d7c4b6"></div>
-                <div class="swatch" style="background:#a37c57"></div>
-              </div>
-              <div class="palette-caption">A soft floral palette with blush, butter yellow, and refined neutrals.</div>
-            </div>
-
-            <div class="guide-no-row">
-              <div class="swatch x-mark" style="background:#7f145d"></div>
-              <div class="swatch x-mark" style="background:#6431a9"></div>
-              <div class="swatch x-mark" style="background:#93c400"></div>
-              <div class="swatch x-mark" style="background:#ffd800"></div>
-              <div class="swatch x-mark" style="background:#1fa4f2"></div>
-              <div class="swatch x-mark" style="background:#ff0000"></div>
-            </div>
-
-            <div class="guide-note-small">
-              Please avoid bright, neon, or highly saturated colors to keep the theme consistent.
-            </div>
+            <img
+              src="wedding-guest-attire2.png"
+              alt="Wedding entourage attire guide"
+              class="attire-guide-image"
+            />
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Guest attire -->
+    <div class="soft-card guide-card floral-corner mb-4">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5">
+          <div class="guide-copy-wrap">
+            <h3><strong>Guest</strong></h3>
+            <p class="guide-copy guide-copy-first">
+              Formal or semi-formal attire is warmly requested. We would truly appreciate our guests wearing polished pieces in soft and muted tones for a graceful and cohesive look.
+            </p>
+
+            <div class="palette-strip mt-4">
+              <div class="swatches">
+                <div class="swatch" style="background:#f4d7df" title="Pastel Pink"></div>
+                <div class="swatch" style="background:#e8bcc7" title="Blush Pink"></div>
+                <div class="swatch" style="background:#f5e6a6" title="Butter Yellow"></div>
+                <div class="swatch floral-swatch" title="Floral Pink/Yellow"></div>
+                <div class="swatch" style="background:#b8a58b" title="Khaki"></div>
+                <div class="swatch" style="background:#d9c7b8" title="Beige"></div>
+                <div class="swatch" style="background:#f4ede3" title="Cream"></div>
+              </div>
+              <p class="palette-caption">
+                Pastel pink, blush pink, butter yellow, floral pink/yellow, khaki, beige and cream are welcome.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="guide-visual-wrap">
+            <img
+              src="wedding-guest-attire.png"
+              alt="Wedding guest attire guide"
+              class="attire-guide-image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
   </div>
 </section>
 
@@ -2221,19 +2564,19 @@
         <div class="row g-4 two-col-mobile">
           <div class="col-6 col-md-6">
             <ul class="name-list small">
-              <li>Pastor Roberto Fajarda</li>
+              <li>Pastor Herbert Fajarda</li>
               <li>Mr. Aguinaldo Cacatian</li>
               <li>Mr. Joselito Espino</li>
               <li>Mr. Zaldy Diaz</li>
               <li>Mrs. Paula Magtibay</li>
               <li>Mrs. Ma. Luz Maca</li>
               <li>Mr. Richard Ruel</li>
-              <li>Mr. Rodolfo Ocampo</li>
               <li>Mr. Marjevic Ciocon</li>
               <li>Mr. Jose Ipo Jr.</li>
               <li>Mr. Rolando Batusbatusan</li>
               <li>Pastor George Cadelina</li>
-              <li>Mrs. Yvonne Talabucon</li>
+              <li>Mrs. Grace Ocampo</li>
+
             </ul>
           </div>
           <div class="col-6 col-md-6">
@@ -2245,7 +2588,6 @@
               <li>Mrs. Maria Victoria Ola</li>
               <li>Mrs. Myra Cacayan</li>
               <li>Mrs. Miriam Ruel</li>
-              <li>Mrs. Grace Ocampo</li>
               <li>Mrs. Evelyn Serisola</li>
               <li>Ms. Carmen Ipo</li>
               <li>Mrs. Monina Batusbatusan</li>
@@ -2452,138 +2794,194 @@
 
 
   
-  
-  
   <section id="reminders" class="section-padding floral-corner">
-    <div class="container">
-      <h2 class="section-title">Gentle Reminders</h2>
+  <div class="container">
+    <h2 class="section-title text-center">Gentle Reminders</h2>
 
-      <div class="row g-3 g-md-4 faq-top-grid">
-        <div class="col-4">
-          <div class="reminder-card">
-            <div class="reminder-card-inner">
-              <div class="reminder-icon-wrap">
-                <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="12" cy="13" r="8"></circle>
-                  <path d="M12 9v4l3 2"></path>
-                  <path d="M7 3 4.5 5.5"></path>
-                  <path d="M17 3l2.5 2.5"></path>
-                </svg>
-              </div>
-              <h4 class="reminder-label">Be On Time</h4>
+    <div class="row g-3 g-md-4 faq-top-grid">
+      <div class="col-12 col-md-4">
+        <div class="reminder-card">
+          <div class="reminder-card-inner">
+            <div class="reminder-icon-wrap">
+              <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="13" r="8"></circle>
+                <path d="M12 9v4l3 2"></path>
+                <path d="M7 3 4.5 5.5"></path>
+                <path d="M17 3l2.5 2.5"></path>
+              </svg>
             </div>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="reminder-card">
-            <div class="reminder-card-inner">
-              <div class="reminder-icon-wrap">
-                <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 14c2-1 3.5-3.5 4-6 2 1 3 2.5 3.5 4.5"></path>
-                  <path d="M13 8c1 1 2 2 2.5 3.5 1-.5 2-.5 3.5 0"></path>
-                  <path d="M6 18c2.5-1.5 4.5-2 6-2s3.5.5 6 2"></path>
-                  <path d="M9.5 12.5 8 14"></path>
-                  <path d="M14.5 11.5 16 13"></path>
-                  <path d="M12 5V3"></path>
-                </svg>
-              </div>
-              <h4 class="reminder-label">Finish the Event</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <div class="reminder-card">
-            <div class="reminder-card-inner">
-              <div class="reminder-icon-wrap">
-                <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 20s-6.5-4.2-8.5-8A4.9 4.9 0 0 1 8 5.5c1.7 0 3 1 4 2.2 1-1.2 2.3-2.2 4-2.2a4.9 4.9 0 0 1 4.5 6.5C18.5 15.8 12 20 12 20z"></path>
-                </svg>
-              </div>
-              <h4 class="reminder-label">Have Fun</h4>
-            </div>
+            <h4 class="reminder-label">Be On Time</h4>
           </div>
         </div>
       </div>
 
-      <h3 class="faq-title">FAQ's</h3>
-
-      <div class="facts-list">
-        <div class="fact-item">
-          <h3>Plus One</h3>
-          <p>
-            Due to limited space, we are only able to accommodate those guests formally invited on our
-            wedding invitation. We want to be surrounded by our families, friends, familiar faces,
-            meaning we can only take those who are invited. Please refer to the number of seats allotted
-            for you. Thank you for your understanding.
-          </p>
+      <div class="col-12 col-md-4">
+        <div class="reminder-card">
+          <div class="reminder-card-inner">
+            <div class="reminder-icon-wrap">
+              <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 14c2-1 3.5-3.5 4-6 2 1 3 2.5 3.5 4.5"></path>
+                <path d="M13 8c1 1 2 2 2.5 3.5 1-.5 2-.5 3.5 0"></path>
+                <path d="M6 18c2.5-1.5 4.5-2 6-2s3.5.5 6 2"></path>
+                <path d="M9.5 12.5 8 14"></path>
+                <path d="M14.5 11.5 16 13"></path>
+                <path d="M12 5V3"></path>
+              </svg>
+            </div>
+            <h4 class="reminder-label">Finish the Event</h4>
+          </div>
         </div>
+      </div>
 
-        <div class="fact-item">
-          <h3>Kids</h3>
-          <p>
-            We love children, but we cannot accommodate them at the venue. This is an adults-only affair.
-            The only kids attending are those who are part of the entourage and those only requested.
-            We hope you understand.
-          </p>
-        </div>
-
-        <div class="fact-item">
-          <h3>Parking</h3>
-          <p>
-            Parking space is available in the vicinity. It is inside our venue. Kindly seek assistance
-            from traffic enforcement personnel for guidance.
-          </p>
-        </div>
-
-        <div class="fact-item">
-          <h3>Arrival Timing</h3>
-          <p>
-            The ceremony begins promptly at 3:00 PM, with the entourage walk starting at 2:30 PM.
-            Please plan to arrive at 2:00 PM to allow ample time for parking and finding your seat.
-          </p>
-        </div>
-
-        <div class="fact-item">
-          <h3>Leave Time</h3>
-          <p>
-            Please do not eat and run. It took us months to plan our wedding. Stay with us until the end
-            of the program. If you must leave early, please personally come to thank us and bid goodbye
-            before you go, perhaps not until our same day edit video is played.
-          </p>
-        </div>
-
-        <div class="fact-item">
-          <h3>Photo/Video</h3>
-          <p>
-            We want photos and videos captured from our day, especially from our friends’ and families’
-            point of view. Meanwhile, during the ceremony, we kindly ask that you refrain from taking
-            photos and videos as we want to savor the solemnity of the moment and honor God as we receive
-            His blessing.
-          </p>
-        </div>
-
-        <div class="fact-item">
-          <h3>RSVP</h3>
-          <p>
-            Unfortunately, if we do not receive your RSVP by the specified date, you will not be able
-            to attend. If you were to show up without submitting an RSVP, there would be no seat for you.
-            If you need to update your RSVP, simply send us a message.
-          </p>
-        </div>
-
-        <div class="fact-item">
-          <h3>Pets</h3>
-          <p>
-            Even if we love pets so much, we are sorry to inform you that the ceremony venue does not
-            allow any pets in the area, and we also want to keep the same vibe and solemnity during the
-            reception, so we are hoping for your understanding about this.
-          </p>
+      <div class="col-12 col-md-4">
+        <div class="reminder-card">
+          <div class="reminder-card-inner">
+            <div class="reminder-icon-wrap">
+              <svg class="reminder-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 20s-6.5-4.2-8.5-8A4.9 4.9 0 0 1 8 5.5c1.7 0 3 1 4 2.2 1-1.2 2.3-2.2 4-2.2a4.9 4.9 0 0 1 4.5 6.5C18.5 15.8 12 20 12 20z"></path>
+              </svg>
+            </div>
+            <h4 class="reminder-label">Have Fun</h4>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+
+    <hr class="section-divider">
+
+    <div class="gifts-section text-center">
+      <h3 class="faq-title">Gifts</h3>
+
+      <p class="gifts-text">
+        Your presence at our wedding is the greatest gift we could ask for. However,
+        if you wish to bless us with a gift, a small contribution towards our future
+        together would be truly appreciated.
+      </p>
+
+      <div class="qr-wrap mt-4">
+        <img
+          src="gcash.jpg"
+          alt="GCash QR Code"
+          class="qr-image"
+        />
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="hashtag-section text-center">
+      <h3 class="faq-title">Our Hashtag</h3>
+
+      <p class="hashtag-text">
+        Help us capture the love. Tag your photos and share your sweet moments with us using our wedding hashtags.
+      </p>
+
+      <div class="hashtag-html-card">
+        <div class="hashtag-line">#MarvieFoundHerFaulo</div>
+        <div class="hashtag-line">#FaulYourHeartToMarvie</div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="upload-photos-section text-center mt-4">
+  <h3 class="faq-title">Upload Photos</h3>
+
+  <p class="upload-photos-text">
+    We’d love to see the day through your eyes. If you captured any special moments,
+    candid smiles, or fun memories from our celebration, please upload them using the
+    QR code below so we can treasure them forever.
+  </p>
+
+  <div class="upload-photos-qr-wrap mt-4">
+    <img
+      src="upload-photos.jpg"
+      alt="Upload Photos QR Code"
+      class="upload-photos-qr-image"
+    />
+  </div>
+</div>
+
+    <hr class="section-divider">
+
+
+    <h3 class="faq-title">FAQ's</h3>
+
+    <div class="facts-list">
+      <div class="fact-item">
+        <h3>Plus One</h3>
+        <p>
+          Due to limited space, we are only able to accommodate those guests formally invited on our
+          wedding invitation. We want to be surrounded by our families, friends, familiar faces,
+          meaning we can only take those who are invited. Please refer to the number of seats allotted
+          for you. Thank you for your understanding.
+        </p>
+      </div>
+
+      <div class="fact-item">
+        <h3>Kids</h3>
+        <p>
+          We love children, but we cannot accommodate them at the venue. This is an adults-only affair.
+          The only kids attending are those who are part of the entourage and those only requested.
+          We hope you understand.
+        </p>
+      </div>
+
+      <div class="fact-item">
+        <h3>Parking</h3>
+        <p>
+          Parking space is available in the vicinity. It is inside our venue. Kindly seek assistance
+          from traffic enforcement personnel for guidance.
+        </p>
+      </div>
+
+      <div class="fact-item">
+        <h3>Arrival Timing</h3>
+        <p>
+          The ceremony begins promptly at 3:00 PM, with the entourage walk starting at 2:30 PM.
+          Please plan to arrive at 2:00 PM to allow ample time for parking and finding your seat.
+        </p>
+      </div>
+
+      <div class="fact-item">
+        <h3>Leave Time</h3>
+        <p>
+          Please do not eat and run. It took us months to plan our wedding. Stay with us until the end
+          of the program. If you must leave early, please personally come to thank us and bid goodbye
+          before you go, perhaps not until our same day edit video is played.
+        </p>
+      </div>
+
+      <div class="fact-item">
+        <h3>Photo/Video</h3>
+        <p>
+          We want photos and videos captured from our day, especially from our friends’ and families’
+          point of view. Meanwhile, during the ceremony, we kindly ask that you refrain from taking
+          photos and videos as we want to savor the solemnity of the moment and honor God as we receive
+          His blessing.
+        </p>
+      </div>
+
+      <div class="fact-item">
+        <h3>RSVP</h3>
+        <p>
+          Unfortunately, if we do not receive your RSVP by the specified date, you will not be able
+          to attend. If you were to show up without submitting an RSVP, there would be no seat for you.
+          If you need to update your RSVP, simply send us a message.
+        </p>
+      </div>
+
+      <div class="fact-item">
+        <h3>Pets</h3>
+        <p>
+          Even if we love pets so much, we are sorry to inform you that the ceremony venue does not
+          allow any pets in the area, and we also want to keep the same vibe and solemnity during the
+          reception, so we are hoping for your understanding about this.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -2596,7 +2994,7 @@
         <p class="rsvp-copy">We would be delighted to celebrate with you. Kindly respond through our RSVP form.</p>
         <div class="rsvp-cheers">Cheers!</div>
         <div class="rsvp-button-wrap">
-          <a href="https://forms.google.com" target="_blank" class="rsvp-button">RSVP now</a>
+          <a href="https://forms.gle/gU8LxNL5WBnTeVfK9" target="_blank" class="rsvp-button">RSVP now</a>
         </div>
       </div>
     </div>
