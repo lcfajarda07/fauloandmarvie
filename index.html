@@ -96,23 +96,34 @@
   margin: 0;
 }
 
-.video-thumbnail-link {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-}
-
 .video-thumbnail-wrap {
   position: relative;
   width: 100%;
+  height: 70vh;
   overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+
+.video-thumbnail-image,
+#videoFrameContainer,
+#weddingVideoFrame {
+  width: 100%;
+  height: 100%;
 }
 
 .video-thumbnail-image {
   display: block;
-  width: 100%;
-  height: 70vh;
   object-fit: cover;
+}
+
+#videoFrameContainer {
+  position: absolute;
+  inset: 0;
+}
+
+#weddingVideoFrame {
+  display: block;
 }
 
 .video-play-button {
@@ -123,11 +134,12 @@
   width: 84px;
   height: 84px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255,255,255,0.88);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  z-index: 2;
 }
 
 .video-play-button span {
@@ -137,7 +149,7 @@
 }
 
 @media (max-width: 768px) {
-  .video-thumbnail-image {
+  .video-thumbnail-wrap {
     height: 38vh;
   }
 
@@ -2413,15 +2425,24 @@
 </section>  
 
 <!-- video -->
- <section id="video-thumbnail-section" class="video-thumbnail-section">
-  <a href="video.mp4" class="video-thumbnail-link" target="_blank" rel="noopener noreferrer">
-    <div class="video-thumbnail-wrap">
-      <img src="1.jpg" alt="Wedding video thumbnail" class="video-thumbnail-image">
-      <div class="video-play-button">
-        <span>&#9658;</span>
-      </div>
+<section id="video-thumbnail-section" class="video-thumbnail-section">
+  <div class="video-thumbnail-wrap" onclick="playWeddingVideo()">
+    <img src="1.jpg" alt="Wedding video thumbnail" class="video-thumbnail-image" id="videoThumb">
+    <div class="video-play-button" id="videoPlayBtn">
+      <span>&#9658;</span>
     </div>
-  </a>
+
+    <div id="videoFrameContainer" style="display:none;">
+      <iframe
+        id="weddingVideoFrame"
+        src="https://drive.google.com/file/d/1GodI-2luXxqtpYMKwooQHmTjFVingAPT/view?usp=drive_link"
+        title="Wedding Video"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 </section>
 
   <section id="celebration" class="section-padding floral-corner">
