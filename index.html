@@ -2304,6 +2304,47 @@
       transform: translateY(-2px) scale(1.02);
     }
 
+    .navbar-toggler,
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler[aria-expanded="true"] {
+      border-color: transparent !important;
+      box-shadow: none !important;
+      outline: 0 !important;
+    }
+
+    .navbar-toggler {
+      border: 0 !important;
+    }
+
+    #rsvp {
+      overflow: visible;
+    }
+
+    #rsvp .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    #rsvp .rsvp-flower-rain {
+      display: none;
+      opacity: 0;
+    }
+
+    #rsvp .rsvp-rain-flower {
+      position: absolute;
+      top: -12vh;
+      left: var(--flower-left);
+      color: rgba(155, 95, 116, 0.34);
+      font-size: var(--flower-size);
+      line-height: 1;
+      pointer-events: none;
+      opacity: 0;
+      animation: flowerRainFall var(--flower-duration) linear infinite;
+      animation-delay: var(--flower-delay);
+      will-change: transform, opacity;
+    }
+
     @keyframes flowerDriftLeft {
       0%, 100% {
         transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
@@ -2343,12 +2384,59 @@
       }
     }
 
+    @keyframes flowerRainFall {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0) rotate(0deg) scale(0.82);
+      }
+      12% {
+        opacity: 0.85;
+      }
+      45% {
+        transform: translate3d(var(--flower-sway), 42vh, 0) rotate(145deg) scale(1);
+      }
+      88% {
+        opacity: 0.8;
+      }
+      100% {
+        opacity: 0;
+        transform: translate3d(calc(var(--flower-sway) * -0.5), 112vh, 0) rotate(315deg) scale(0.95);
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      #rsvp .rsvp-flower-rain {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100svh;
+        z-index: 1040;
+        overflow: hidden;
+        pointer-events: none;
+        transition: opacity 0.35s ease;
+      }
+
+      body.rsvp-rain-active #rsvp .rsvp-flower-rain {
+        display: block;
+        opacity: 1;
+      }
+    }
+
+    @supports (height: 100dvh) {
+      @media (max-width: 767.98px) {
+        #rsvp .rsvp-flower-rain {
+          height: 100dvh;
+        }
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .floral-corner::before,
       .floral-corner::after,
       .rsvp-panel::before,
       .rsvp-panel::after,
-      #rsvp .rsvp-button-wrap {
+      #rsvp .rsvp-button-wrap,
+      #rsvp .rsvp-rain-flower {
         animation: none !important;
       }
     }
@@ -3263,12 +3351,50 @@
   <script>
   document.addEventListener('DOMContentLoaded', () => {
     const lines = document.querySelectorAll('.type-line');
+    const rsvpSection = document.getElementById('rsvp');
     const storyCard = document.querySelector('#story .story-card');
     const isMobile = window.matchMedia('(max-width: 767.98px)').matches;
     const typeSpeed = 75;     // bigger = slower
     const linePause = 900;    // pause between lines
     const startDelay = isMobile ? 250 : 1500;
     let hasPlayed = false;
+
+    if (rsvpSection && !rsvpSection.querySelector('.rsvp-flower-rain')) {
+      const rain = document.createElement('div');
+      const flowerCount = 22;
+
+      rain.className = 'rsvp-flower-rain';
+      rain.setAttribute('aria-hidden', 'true');
+
+      for (let i = 0; i < flowerCount; i++) {
+        const flower = document.createElement('span');
+        const left = (i * 17 + 8) % 100;
+        const sway = i % 2 === 0 ? 24 + (i % 5) * 5 : -24 - (i % 4) * 6;
+
+        flower.className = 'rsvp-rain-flower';
+        flower.textContent = '\u273F';
+        flower.style.setProperty('--flower-left', `${left}%`);
+        flower.style.setProperty('--flower-size', `${0.72 + (i % 4) * 0.14}rem`);
+        flower.style.setProperty('--flower-duration', `${7.5 + (i % 6) * 0.55}s`);
+        flower.style.setProperty('--flower-delay', `${-1 * (i % 9) * 0.72}s`);
+        flower.style.setProperty('--flower-sway', `${sway}px`);
+        rain.appendChild(flower);
+      }
+
+      rsvpSection.prepend(rain);
+    }
+
+    if (rsvpSection && 'IntersectionObserver' in window) {
+      const rainObserver = new IntersectionObserver((entries) => {
+        const isRaining = entries.some(entry => entry.isIntersecting && entry.intersectionRatio > 0.18);
+        document.body.classList.toggle('rsvp-rain-active', isMobile && isRaining);
+      }, {
+        threshold: [0, 0.18, 0.45],
+        rootMargin: '0px 0px -8% 0px'
+      });
+
+      rainObserver.observe(rsvpSection);
+    }
 
     lines.forEach((line) => {
       const text = line.getAttribute('data-text') || '';
